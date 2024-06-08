@@ -4,67 +4,81 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Nelson Monteiro | Index</title>
-  <link rel="stylesheet" href="styles/index-styles.css">
+  <title>Nelson Monteiro - WDD 230 - Web Frontend Development</title>
+  <meta name="description"
+    content="WDD 230 - Web Frontend Development. Nelson Monteiro's portal for learning frontend development.">
+  <meta name="author" content="Nelson Monteiro">
+  <link rel="stylesheet" href="styles/base.css">
+  <link rel="stylesheet" href="styles/larger.css">
 </head>
 
 <body>
   <header>
-    <h1>Welcome to WDD 230: Web Frontend Development I</h1>
+    <img src="images/profile-img-optim..png" alt="Profile Picture">
+    <span>Nelson Monteiro</span>
   </header>
-  
+
   <nav>
-    <button onclick="toggleLinks('week01-links')">W01</button>
-    <button onclick="toggleLinks('week02-links')">W02</button>
-    <button onclick="toggleLinks('week03-links')">W03</button>
-    <button onclick="toggleLinks('week04-links')">W04</button>
-    <button onclick="toggleLinks('week05-links')">W05</button>
-    <button onclick="toggleLinks('week06-links')">W06</button>
-    <button onclick="toggleLinks('week07-links')">W07</button>
+    <a href="#">Home</a>
+    <a href="#">Chamber</a>
+    <a href="#">Site Plan</a>
+    <a href="#">Form</a>
   </nav>
 
   <main>
-    <div id="week01-links" class="week-links">
-      <a href="week01/holygrail.html">CSS Layout Review W01</a>
-      <a href="week01/media-query.html">Media Query Example</a>
-    </div>
-    <div id="week02-links" class="week-links">
-      <!-- Week 02 links here -->
-      <a href="week02/example1.html">Example 1 W02</a>
-      <a href="week02/example2.html">Example 2 W02</a>
-    </div>
-    <div id="week03-links" class="week-links">
-      <!-- Week 03 links here -->
-      <a href="week03/example1.html">Example 1 W03</a>
-      <a href="week03/example2.html">Example 2 W03</a>
-    </div>
-    <div id="week04-links" class="week-links">
-      <!-- Week 04 links here -->
-      <a href="week04/example1.html">Example 1 W04</a>
-      <a href="week04/example2.html">Example 2 W04</a>
-    </div>
-    <div id="week05-links" class="week-links">
-      <!-- Week 05 links here -->
-      <a href="week05/example1.html">Example 1 W05</a>
-      <a href="week05/example2.html">Example 2 W05</a>
-    </div>
-    <div id="week06-links" class="week-links">
-      <!-- Week 06 links here -->
-      <a href="week06/example1.html">Example 1 W06</a>
-      <a href="week06/example2.html">Example 2 W06</a>
-    </div>
-    <div id="week07-links" class="week-links">
-      <!-- Week 07 links here -->
-      <a href="week07/example1.html">Example 1 W07</a>
-      <a href="week07/example2.html">Example 2 W07</a>
-    </div>
-
+    <h1>WDD 230: Web Frontend Development</h1>
+    <section class="card">
+      <h2>Learning Activities</h2>
+      <ul>
+        <div id="week01-links" class="week-links">
+          <li><a href="week01/holygrail.html">CSS Layout Review W01</a></li>
+          <li><a href="week01/media-query.html">Media Query Example</a></li>
+        </div>
+        <div id="week02-links" class="week-links">
+          <!-- Week 02 links here -->
+          <li><a href="week02/example1.html">Example 1 W02</a></li>
+          <li><a href="week02/example2.html">Example 2 W02</a></li>
+        </div>
+        <div id="week03-links" class="week-links">
+          <!-- Week 03 links here -->
+          <li><a href="week03/example1.html">Example 1 W03</a></li>
+          <li><a href="week03/example2.html">Example 2 W03</a></li>
+        </div>
+        <div id="week04-links" class="week-links">
+          <!-- Week 04 links here -->
+          <li><a href="week04/example1.html">Example 1 W04</a></li>
+          <li><a href="week04/example2.html">Example 2 W04</a></li>
+        </div>
+        <div id="week05-links" class="week-links">
+          <!-- Week 05 links here -->
+          <li><a href="week05/example1.html">Example 1 W05</a></li>
+          <li><a href="week05/example2.html">Example 2 W05</a></li>
+        </div>
+        <div id="week06-links" class="week-links">
+          <!-- Week 06 links here -->
+          <li><a href="week06/example1.html">Example 1 W06</a></li>
+          <li><a href="week06/example2.html">Example 2 W06</a></li>
+        </div>
+        <div id="week07-links" class="week-links">
+          <!-- Week 07 links here -->
+          <li><a href="week07/example1.html">Example 1 W07</a></li>
+          <li><a href="week07/example2.html">Example 2 W07</a></li>
+        </div>
+      </ul>
+    </section>
+    <section class="card">
+      <h2>Information</h2>
+      <p>Weather: [Placeholder]</p>
+      <p>Number of visits: [Placeholder]</p>
+    </section>
   </main>
+
   <footer>
-    <p class="copyright">&copy; Nelson Monteiro - WDD230</p>
+    <p class="copyright">&copy; <span id="currentYear"></span> Nelson Monteiro, Hampshire, United Kingdom</p>
+    <p id="lastModified"></p>
   </footer>
 
-  <script src="js/index-script.js"></script>
+  <script src="scripts/index-script.js"></script>
 </body>
 
 </html>

@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Allerta+Stencil&family=Audiowide&display=swap');
+
+:root {
+    /* Change the values below to your colors from your palette */
+    --primary-color: #003135;
+    --secondary-color: #afdde5;
+    --accent1-color: #0fa4af;
+    --accent2-color: #ff7700;
+
+    /* Change the values below to your chosen font(s) */
+    --heading-font: "Audiowide", sans-serif;
+    --paragraph-font: "Allerta Stencil", sans-serif;
+
+    /* These colors below should be chosen from among your palette colors above */
+    --headline-color-on-white: #003135;
+    /* Headlines on a white background */
+    --headline-color-on-color: #afdde5;
+    /* Headlines on a colored background */
+    --paragraph-color-on-white: #003135;
+    /* Paragraph text on a white background */
+    --paragraph-color-on-color: #FFFFFF;
+    /* Paragraph text on a colored background */
+    --paragraph-background-color: #003135;
+    --nav-link-color: #003135;
+    --nav-background-color: #ff7700;
+    --nav-hover-link-color: #003135;
+    --nav-hover-background-color: #0fa4af;
+}
+
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--paragraph-font);
+    background-color: var(--secondary-color);
+    max-width: 100%;
+    margin: 0;
+}
+
+header {
+    background-color: var(--primary-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px;
+}
+
+header img {
+    width: 15%;
+    height: auto;
+    border-radius: 50%;
+    margin-right: 10%;
+}
+
+header span {
+    font-size: 100px;
+    font-weight: bold;
+    color: var(--accent2-color)
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--nav-link-color);
+    color: var(--nav-background-color);
+    font-size: 30px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+nav a {
+    flex: 1;
+    display: inline-block;
+    padding: 10px 20px;
+    /* margin-right: -8px; */
+    background-color: var(--nav-background-color);
+    color: var(--nav-link-color);
+    text-decoration: none;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+nav a:hover {
+    background-color: var(--nav-hover-background-color);
+    color: var(--nav-hover-link-color);
+}
