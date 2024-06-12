@@ -37,7 +37,6 @@ body {
     background-color: var(--secondary-color);
     max-width: 100%;
     margin: 0;
-    color: var(--paragraph-color-on-color);
 }
 
 h1, h2 {
