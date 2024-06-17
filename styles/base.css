@@ -62,7 +62,8 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 1%;
+    padding: 10px;
+    width: 100%;
 }
 
 header img {
@@ -82,11 +83,10 @@ nav {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    background-color: var(--nav-link-color);
-    color: var(--nav-background-color);
+    background-color: var(--nav-background-color);
     font-size: 30px;
+    padding: 10px;
     width: 100%;
-    box-sizing: border-box;
 }
 
 nav a {
