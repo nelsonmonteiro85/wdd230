@@ -1,16 +1,4 @@
-@font-face {
-    font-family: 'Allerta Stencil';
-    src: url('/fonts/Allerta_Stencil/AllertaStencil-Regular.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Audiowide';
-    src: url('/fonts/Audiowide/Audiowide-Regular.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-}
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Rubik+Distressed&display=swap');
 
 :root {
     /* Change the values below to your colors from your palette */
@@ -21,7 +9,7 @@
 
     /* Change the values below to your chosen font(s) */
     --heading-font: "Audiowide", sans-serif;
-    --paragraph-font: "Allerta Stencil", sans-serif;
+    --paragraph-font: "Rubik Distressed", sans-serif;
 
     /* These colors below should be chosen from among your palette colors above */
     --headline-color-on-white: #003135;
