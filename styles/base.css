@@ -1,4 +1,16 @@
-@import url('https://fonts.googleapis.com/css2?family=Allerta+Stencil&family=Audiowide&display=swap');
+@font-face {
+    font-family: 'Allerta Stencil';
+    src: url('/fonts/Allerta_Stencil/AllertaStencil-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Audiowide';
+    src: url('/fonts/Audiowide/Audiowide-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
 
 :root {
     /* Change the values below to your colors from your palette */
