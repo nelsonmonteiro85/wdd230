@@ -190,11 +190,11 @@ body.dark-mode .card {
 }
 
 body.dark-mode .card a {
-    color: var(--secondary-color);
+    color: var(--accent2-color);
 }
 
 body.dark-mode .card a:visited {
-    color: var(--accent1-color);
+    color: var(--secondary-color);
 }
 
 body.dark-mode h1 {
