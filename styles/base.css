@@ -1,5 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Rubik+Distressed&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Rubik+Distressed&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
 
+/* Root variables */
 :root {
     /* Change the values below to your colors from your palette */
     --primary-color: #003135;
@@ -7,19 +8,15 @@
     --accent1-color: #0fa4af;
     --accent2-color: #ff7700;
 
-    /* Change the values below to your chosen font(s) */
     --heading-font: "Audiowide", sans-serif;
-    --paragraph-font: "Rubik Distressed", sans-serif;
+    --title-font: "Rubik Distressed", sans-serif;
+    --paragraph-font: "Ubuntu", sans-serif;
 
     /* These colors below should be chosen from among your palette colors above */
-    --headline-color-on-white: #003135;
-    /* Headlines on a white background */
-    --headline-color-on-color: #afdde5;
-    /* Headlines on a colored background */
-    --paragraph-color-on-white: #003135;
-    /* Paragraph text on a white background */
-    --paragraph-color-on-color: #FFFFFF;
-    /* Paragraph text on a colored background */
+    --headline-color-on-white: #003135;       /* Headlines on a white background */
+    --headline-color-on-color: #afdde5;       /* Headlines on a colored background */
+    --paragraph-color-on-white: #003135;      /* Paragraph text on a white background */
+    --paragraph-color-on-color: #FFFFFF;      /* Paragraph text on a colored background */
     --paragraph-background-color: #003135;
     --nav-link-color: #003135;
     --nav-background-color: #ff7700;
@@ -27,6 +24,7 @@
     --nav-hover-background-color: #0fa4af;
 }
 
+/* Global styles */
 *::before,
 *::after {
     box-sizing: border-box;
@@ -35,7 +33,7 @@
 body {
     font-family: var(--paragraph-font);
     background-color: var(--secondary-color);
-    max-width: 100%;
+    max-width: 99%;
     margin: 0;
 }
 
@@ -58,19 +56,21 @@ h2 {
 }
 
 header {
+    font-family: var(--title-font);
     background-color: var(--primary-color);
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 10px;
     width: 100%;
+    position: relative;
 }
 
 header img {
     width: 10%;
     height: auto;
     border-radius: 50%;
-    margin-right: 8%;
+    margin-right: 5%;
 }
 
 header span {
@@ -79,9 +79,9 @@ header span {
 }
 
 nav {
+    font-family: var(--title-font);
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-around;
     background-color: var(--nav-background-color);
     font-size: 30px;
     padding: 10px;
@@ -102,6 +102,113 @@ nav a {
 nav a:hover {
     background-color: var(--nav-hover-background-color);
     color: var(--nav-hover-link-color);
+}
+
+#darkModeToggle {
+    background: none;
+    color: #FFFFFF;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    position: absolute;
+    right: 10%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* Hamburger menu styles */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    transform: translateY(-50%);
+}
+
+.hamburger div {
+    width: 25px;
+    height: 3px;
+    background-color: var(--accent2-color);
+    margin: 3px 0;
+    transition: 0.4s;
+}
+
+.menu {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 10px;
+    background-color: var(--nav-background-color);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.menu a {
+    padding: 12px 16px;
+    text-decoration: none;
+    color: var(--nav-link-color);
+    display: block;
+}
+
+.menu a:hover {
+    background-color: var(--nav-hover-background-color);
+}
+
+/* Hamburger animation to X */
+.hamburger.open div:nth-child(1) {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.hamburger.open div:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.open div:nth-child(3) {
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+
+/* Dark Mode Styles */
+body.dark-mode {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+body.dark-mode header {
+    background-color: #1f1f1f;
+}
+
+body.dark-mode hr {
+    border-top: 2px solid var(--accent2-color);
+}
+
+body.dark-mode .card {
+    background-color: #333232;
+    color: #ffffff;
+}
+
+body.dark-mode .card a {
+    color: var(--secondary-color);
+}
+
+body.dark-mode .card a:visited {
+    color: var(--accent1-color);
+}
+
+body.dark-mode h1 {
+    background-color: #121212;
+    color: #ff7700;
+}
+
+body.dark-mode h2 {
+    background-color: #1f1f1f;
+    color: #ff7700;
+}
+
+body.dark-mode footer {
+    background-color: #1f1f1f;
 }
 
 hr {
@@ -156,7 +263,62 @@ footer {
     color: var(--accent2-color);
 }
 
-/* Media Queries */
+@media (max-width: 768px) {
+    header span {
+        font-size: 30px;
+    }
+
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav a {
+        padding: 10px;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    .menu {
+        position: absolute;
+        top: 100%;
+        width: 100%;
+        background-color: var(--nav-background-color);
+    }
+
+    .main-nav {
+        display: none;
+        flex-direction: column;
+        background-color: var(--nav-background-color);
+        font-size: 20px;
+        padding: 10px;
+        width: 100%;
+    }
+
+    .main-nav.open {
+        display: flex;
+    }
+
+    header {
+        position: relative;
+    }
+
+    header img {
+        width: 10%;
+        border-radius: 50%;
+        margin-right: 2%;
+        margin-left: 4%;
+    }
+
+    header span {
+        font-size: 40px;
+        margin-right: 8%;
+    }
+
+}
+
 @media (max-width: 600px) {
     h1 {
         font-size: 24px;
@@ -164,7 +326,7 @@ footer {
     }
 
     header span {
-        font-size: 40px;
+        font-size: 25px;
     }
 
     nav {
@@ -174,4 +336,5 @@ footer {
     .grid-container {
         grid-template-columns: 1fr;
     }
+
 }
