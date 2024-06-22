@@ -241,7 +241,7 @@ hr {
     background-color: #f9f9f9;
     border-radius: 6px;
     margin: 20px;
-    box-shadow: 0 0 10px rgba(255, 119, 0, 0.2);
+    box-shadow: 0 0 10px rgba(255, 119, 0, 20);
 }
 
 .card h2 {
