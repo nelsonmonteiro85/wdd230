@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Porto Chamber of Commerce</title>
+    <meta name="description"
+        content="WDD230 - Web Frontend Development, Nelson Monteiro - Chamber of Commerce Homepage">
+    <meta name="author" content="Nelson Monteiro">
+    <link rel="icon" href="Port.ico">
+    <meta property="og:title" content="Porto Chamber of Commerce Homepage">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="#">
+    <meta property="og:url" content="#">
+    <!-- <link rel="stylesheet" href="styles/normalize.css"> -->
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/larger.css">
+    <script src="scripts/index-chamber.js"></script>
+    <script src="scripts/weather.js"></script>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <a class="logo">PortoCC</a>
+            <div class="links">
+                <ul class="nav-list">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#">Discover</a></li>
+                    <li><a href="#">Directory</a></li>
+                    <li><a class="join button" href="#">Join</a></li>
+                </ul>
+            </div>
+            <div id="darkModeToggle">🌙</div>
+            <!-- Hamburger menu -->
+            <div class="hamburger" id="hamburger">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </nav>
+
+        <div class="hero">
+            <img src="images/Porto-ChamberD.jpg" alt="Hero image" class="hero-img">
+        </div>
+
+        <section id="hero-msg">
+            <h1 class="title">Porto Chamber of Commerce</h1>
+            <div class="button-box">
+                <a class="join-us button" href="/wdd230/chamber/join.html">Join us</a>
+            </div>
+        </section>
+    </header>
+
+    <main class="main-home">
+        <h2 class="main-home-tile"> Welcome to Porto Chamber of Commerce Website</h2>
+
+        <section class="current-event card">
+            <h3 class="section-title">Current Event</h3>
+            <img src="images/Porto-S.Joao.jpg" alt="Baloes de S.Joao">
+            <p>The Feast of São João is the most important festival in the city of Porto, as it celebrates the feast of
+                Saint John, the patron saint of the city.
+                For this reason, São João is the most venerated saint in Porto and the whole city is decked out with
+                music, dance and fireworks to welcome the summer solstice.
+                The Festas de São João in Porto last several days. For example, São João 2024 is celebrated from 7 June
+                to 30 June, with the most important days of the celebration being 23 and 24 June.
+                Above all, the night of the eve of St. John’s Day, around midnight, is the highlight of the Festas, when
+                the sky fills with light and colour to celebrate the definitive entry into the summer season.</p>
+            <img src="images/Porto-S.JoaoFestival2.jpg" alt="">
+        </section>
+
+        <section class="weather-card card">
+            <h3 class="section-title">Weather</h3>
+            <h4>Today's Weather</h4>
+            <p> Porto, Portugal</p>
+            <p id="current-temp"></p>
+            <figure>
+                <img id="weather-icon" src="/" alt="">
+                <figcaption></figcaption>
+            </figure>
+
+            <section>
+                <h4>Three Day Forecast</h4>
+                <div id="threeDayForecast" class="forecast-container"></div>
+            </section>
+        </section>
+
+        <section class="spotlights card">
+            <h3 class="section-title section-title3"> Member Spotlights</h3>
+            <div class="spot1 spot" id="companyList">
+                <!-- Placeholder for company spotlights -->
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="copyright">
+            <p>&copy; <span class="currentYear"></span> Nelson Monteiro, Portugal </p>
+            <p>Web Frontend Development | WDD230</p>
+        </div>
+
+        <div class="lastmod">
+            <p>Last Modification:</p>
+            <p class="lastModified"></p>
+        </div>
+
+        <div class="contacts">
+            <p>Contact Information:</p>
+            <p>+351 234 567 890</p>
+            <p>portocc@gmail.pt</p>
+        </div>
+    </footer>
+
+    <script>
+        document.querySelector('.currentYear').textContent = new Date().getFullYear();
+        document.querySelector('.lastModified').textContent = document.lastModified;
+    </script>
+</body>
+
+</html>

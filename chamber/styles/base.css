@@ -1,0 +1,321 @@
+:root {
+    --primary-color: #046a38;
+    --secondary-color: #da291c;
+    --accent1-color: #ffe900;
+    --accent2-color: #ffffff;
+
+    --heading-font: "Belleza";
+    --paragraph-font: "Roboto Serif";
+
+    --headline-color-on-white: #046a38;
+    --headline-color-on-color: #ffe900;
+    --paragraph-color-on-white: #046a38;
+    --paragraph-color-on-color: #FFFFFF;
+    --paragraph-background-color: #046a38;
+    --nav-link-color: #ffe900;
+    --nav-background-color: #046a38;
+    --nav-hover-link-color: #046a38;
+    --nav-hover-background-color: #ffe900;
+}
+
+body {
+    font-family: var(--paragraph-font);
+    background-color: var(--accent2-color);
+    color: var(--accent1-color);
+    font-size: large;
+}
+
+nav {
+    background-color: var(--nav-background-color);
+    color: var(--nav-link-color);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1em;
+}
+
+#menu {
+    display: block;
+    font-size: 2rem;
+    font-weight: 700;
+    text-decoration: none;
+    color: var(--nav-link-color);
+}
+
+.links {
+    background-color: var(--nav-background-color);
+    justify-content: right;
+}
+
+.nav-list {
+    list-style: none;
+    margin: 0 auto;
+    max-width: 600px;
+}
+
+.nav-list li {
+    display: none;
+}
+
+.nav-list a {
+    color: var(--nav-link-color);
+    display: block;
+    padding: 1em 2em;
+    text-align: center;
+    text-decoration: none;
+    transition: 0.5s;
+}
+
+.nav-list a:hover,
+.nav-list a:active {
+    color: var(--nav-hover-link-color);
+    background-color: var(--nav-hover-background-color);
+    border-radius: 5px;
+}
+
+.hero-img {
+    width: 100%;
+    height: auto;
+}
+
+.show li {
+    display: block;
+}
+
+#menu.show::before {
+    content: "X";
+    margin-left: 1.5em;
+}
+
+.logo {
+    padding: 0.5em;
+}
+
+.logo img {
+    width: auto;
+    height: 40px; /* Adjust the height as needed */
+    display: block;
+}
+
+.button {
+    font-family: var(--heading-font);
+    font-weight: 300;
+}
+
+.join {
+    background-color: var(--primary-color);
+    color: var(--headline-color-on-color);
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.join:hover {
+    background-color: var(--accent1-color);
+    transition: 1s background;
+}
+
+.join-us:hover {
+    background-color: var(--accent2-color);
+    transition: 1s background;
+}
+
+img {
+    width: 100%;
+}
+
+#hero-msg {
+    background-color: var(--primary-color);
+    text-align: center;
+    padding: 2em;
+    margin-top: 1em;
+    border-radius: 5px;
+    grid-column: 2/3;
+}
+
+.title {
+    color: var(--headline-color-on-color);
+    font-family: var(--title-font);
+    font-size: 3em;
+    font-weight: 300;
+    text-shadow: 4px 4px 4px var(--secondary-color);
+}
+
+.button-box a {
+    background-color: var(--primary-color);
+    color: var(--headline-color-on-color);
+    padding: 15px 50px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.main-home {
+    background-color: #ffffff;
+    display: inline-block;
+}
+
+.main-home h2 {
+    color: var(--primary-color);
+    font-family: var(--heading-font);
+    font-weight: 500;
+    text-align: center;
+    padding: 2em;
+}
+
+.card {
+    background-color: var(--paragraph-background-color);
+    padding: 2em;
+    margin: 1em;
+    border-radius: 5px;
+}
+
+#weather-icon {
+    width: 30%;
+}
+
+#threeDayForecast {
+    width: 20%;
+    margin-left: 32%;
+}
+
+.weather-card {
+    text-align: center;
+    font-size: 1em;
+}
+
+.section-title {
+    font-family: var(--heading-font);
+    text-align: left;
+}
+
+footer {
+    background-color: var(--primary-color);
+    color: var(--headline-color-on-color);
+    display: block;
+    align-items: center;
+    padding: 20px;
+    margin-top: 10%;
+}
+
+/* Hamburguer */
+/* ************************************************************* */
+
+/* Hamburger menu styles */
+.hamburger {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    top: 50%;
+    left: 15px;
+}
+
+.hamburger div {
+    width: 25px;
+    height: 3px;
+    background-color: var(--secondary-color);
+    margin: 3px 0;
+    transition: 0.4s;
+}
+
+#menu::before {
+    content: "☰";
+    color: var(--secondary-color);
+    padding-right: 0.5em;
+}
+
+#darkModeToggle,
+#menu {
+    cursor: pointer;
+}
+
+/* Hamburger animation to X */
+.hamburger.open div:nth-child(1) {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.hamburger.open div:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.open div:nth-child(3) {
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+
+
+/* ************************************************************* */
+
+
+/* DarkMode */
+/* ************************************************************* */
+
+#darkModeToggle {
+    cursor: pointer;
+    display: inline-block;
+}
+
+body.dark-mode {
+    background-color: black;
+    color: #ffffff;
+}
+
+.dark-mode .nav-background-color {
+    background-color: black;
+}
+
+.dark-mode .nav-link-color {
+    color: #ffffff;
+}
+
+.dark-mode .hero-img.light-mode-img {
+    display: none; /* Hide light mode image in dark mode */
+}
+
+.dark-mode .hero-img.dark-mode-img {
+    display: block; /* Show dark mode image in dark mode */
+}
+
+/* ************************************************************* */
+
+@media (min-width: 768px) {
+    .hamburger {
+        display: none;
+    }
+
+    form {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 40px;
+    }
+
+    .input {
+        flex: 1 1 calc(50% - 40px);
+    }
+
+    .input.full-width {
+        flex: 1 1 100%;
+    }
+
+    .hero-paragraph2,
+    .hero-paragraph3 {
+        display: block;
+    }
+
+    .logo {
+        padding: 1em;
+    }
+
+    .grid-col-1,
+    .grid-col-2,
+    .grid-col-3 {
+        grid-column: unset;
+    }
+
+    .grid-row-1,
+    .grid-row-2 {
+        grid-row: unset;
+    }
+
+    .forecast-row {
+        margin-left: 32%;
+        margin-right: 32%;
+    }
+}
