@@ -43,18 +43,26 @@ nav {
 }
 
 .links {
-    background-color: var(--nav-background-color);
-    justify-content: right;
+    display: none;
+}
+
+.links.open {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .nav-list {
     list-style: none;
-    margin: 0 auto;
-    max-width: 600px;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .nav-list li {
-    display: none;
+    margin: 0;
 }
 
 .nav-list a {
@@ -273,11 +281,27 @@ body.dark-mode {
     display: block; /* Show dark mode image in dark mode */
 }
 
+.dark-mode .main-home {
+    background-color: black;
+}
+
 /* ************************************************************* */
 
 @media (min-width: 768px) {
     .hamburger {
         display: none;
+    }
+
+    .links {
+        display: flex;
+    }
+
+    .nav-list {
+        flex-direction: row;
+    }
+
+    .nav-list li {
+        display: inline;
     }
 
     form {
