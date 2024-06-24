@@ -2,7 +2,7 @@
 
 :root {
     --primary-color: #046a38;
-    --secondary-color: #da291c;
+    --secondary-color: #c70d00;
     --accent1-color: #ffe900;
     --accent2-color: #ffffff;
 
@@ -15,7 +15,7 @@
     --paragraph-color-on-color: #FFFFFF;
     --paragraph-background-color: #046a38;
     --nav-link-color: #ffe900;
-    --nav-background-color: #da291c;
+    --nav-background-color: #c70d00;
     --nav-hover-link-color: #046a38;
     --nav-hover-background-color: #ffe900;
 }
