@@ -1,6 +1,6 @@
 :root {
     --primary-color: #046a38;
-    --secondary-color: #da291c;
+    --secondary-color: #c70d00;
     --accent1-color: #ffe900;
     --accent2-color: #ffffff;
 
@@ -32,6 +32,8 @@ nav {
     justify-content: space-around;
     align-items: center;
     padding: 1em;
+    position: relative;
+    z-index: 10;
 }
 
 #menu {
@@ -43,13 +45,19 @@ nav {
 }
 
 .links {
-    display: none;
+    display: none; /* Hide links by default on mobile */
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--nav-background-color);
+    position: absolute;
+    top: 100%;
+    left: 0;
+    transition: transform 0.3s ease;
 }
 
 .links.open {
     display: flex;
-    flex-direction: column;
-    align-items: center;
 }
 
 .nav-list {
@@ -110,13 +118,6 @@ nav {
     font-weight: 300;
 }
 
-.join {
-    background-color: var(--primary-color);
-    color: var(--headline-color-on-color);
-    border-radius: 5px;
-    cursor: pointer;
-}
-
 .join:hover {
     background-color: var(--accent1-color);
     transition: 1s background;
@@ -149,11 +150,17 @@ img {
 }
 
 .button-box a {
-    background-color: var(--primary-color);
+    background-color: var(--secondary-color);
     color: var(--headline-color-on-color);
     padding: 15px 50px;
     border-radius: 5px;
     text-decoration: none;
+}
+
+.button-box a:hover {
+    background-color: var(--headline-color-on-color);
+    color: var(--secondary-color);
+    box-shadow: 0 0 30px var(--secondary-color);
 }
 
 .main-home {
@@ -171,9 +178,36 @@ img {
 
 .card {
     background-color: var(--paragraph-background-color);
+    color: var(--accent1-color);
     padding: 2em;
     margin: 1em;
     border-radius: 5px;
+}
+
+/* .current-event.card.h3 {
+    text-align: left;
+} */
+
+.current-event.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.current-event.card img {
+    display: block;
+    max-width: 80%;
+    border: 3px solid var(--secondary-color);
+    box-shadow: 0 0 50px var(--secondary-color);
+    border-radius: 5px;
+}
+
+.current-event.card p {
+    max-width: 80%;
+    text-align: justify;
+    margin-bottom: 15px;
+    z-index: 1;
 }
 
 #weather-icon {
@@ -181,8 +215,13 @@ img {
 }
 
 #threeDayForecast {
-    width: 20%;
-    margin-left: 32%;
+    width: 40%;
+    margin: auto;
+    padding: 10px;
+}
+
+div .forecast-item {
+    display:flex;
 }
 
 .weather-card {
@@ -193,6 +232,53 @@ img {
 .section-title {
     font-family: var(--heading-font);
     text-align: left;
+    padding-bottom: 10px;
+}
+
+.spotlights.card {
+    padding: 15px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.spot {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+}
+
+.spot img {
+    width: 60%;
+    display: block;
+    border: 3px solid var(--secondary-color);
+    box-shadow: 0 0 10px var(--secondary-color);
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.spot p {
+    margin-bottom: 8px;
+    text-align: center;
+}
+
+.spot a {
+    color: var(--link-color);
+    transition: color 0.3s ease;
+}
+
+.spot a:hover {
+    color: var(--accent2-color);
+}
+
+.section-title {
+    text-align: left;
+    margin-bottom: 20px;
 }
 
 footer {
@@ -294,6 +380,10 @@ body.dark-mode {
 
     .links {
         display: flex;
+        position: static;
+        flex-direction: row;
+        align-items: center;
+        width: auto;
     }
 
     .nav-list {
@@ -321,6 +411,7 @@ body.dark-mode {
     .hero-paragraph2,
     .hero-paragraph3 {
         display: block;
+        z-index: 1;
     }
 
     .logo {

@@ -66,5 +66,4 @@ document.addEventListener('DOMContentLoaded', function () {
             mainContent.style.transform = 'translateY(0)';
         }
     });
-
 });

@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     // Update current year
     let date = new Date().getFullYear();
     document.querySelector(".currentYear").textContent = date;
@@ -34,20 +34,29 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Hamburger menu toggle functionality
     const hamburger = document.getElementById('hamburger');
-    const mainNav = document.querySelector('.links');
-    const mainContent = document.querySelector('main');
+    const links = document.querySelector('.links');
+    const mainContent = document.querySelector('.main-home');
+    const heroSection = document.querySelector('.hero');
+    const heroMsg = document.querySelector('#hero-msg');
+    const footer = document.querySelector('footer');
 
-    hamburger.addEventListener('click', () => {
+    hamburger.addEventListener('click', function() {
         hamburger.classList.toggle('open');
-        mainNav.classList.toggle('open');
+        links.classList.toggle('open');
 
-        if (mainNav.classList.contains('open')) {
-            // Slide the main content down slightly
-            mainContent.style.transform = 'translateY(1vh)';
+        if (links.classList.contains('open')) {
+            const linksHeight = links.offsetHeight;
+
+            heroSection.style.transform = `translateY(${linksHeight}px)`;
+            heroMsg.style.transform = `translateY(${linksHeight}px)`;
+            mainContent.style.transform = `translateY(${linksHeight}px)`;
+            footer.style.transform = `translateY(${linksHeight}px)`;
             mainContent.style.transition = 'transform 0.3s ease';
         } else {
-            // Slide the main content back to its original position
+            heroSection.style.transform = 'translateY(0)';
+            heroMsg.style.transform = 'translateY(0)';
             mainContent.style.transform = 'translateY(0)';
+            footer.style.transform = 'translateY(0)';
         }
     });
-});
+});    

@@ -17,7 +17,6 @@
     <link rel="stylesheet" href="styles/base.css">
     <link rel="stylesheet" href="styles/larger.css">
     <script src="scripts/index-chamber.js"></script>
-    <script src="scripts/weather.js"></script>
 </head>
 
 <body>
@@ -57,17 +56,18 @@
         <h2 class="main-home-tile"> Welcome to Porto Chamber of Commerce Website</h2>
 
         <section class="current-event card">
-            <h3 class="section-title">Current Event</h3>
-            <img src="images/Porto-S.Joao.jpg" alt="Baloes de S.Joao">
-            <p>The Feast of São João is the most important festival in the city of Porto, as it celebrates the feast of
-                Saint John, the patron saint of the city.
-                For this reason, São João is the most venerated saint in Porto and the whole city is decked out with
-                music, dance and fireworks to welcome the summer solstice.
-                The Festas de São João in Porto last several days. For example, São João 2024 is celebrated from 7 June
-                to 30 June, with the most important days of the celebration being 23 and 24 June.
-                Above all, the night of the eve of St. John’s Day, around midnight, is the highlight of the Festas, when
-                the sky fills with light and colour to celebrate the definitive entry into the summer season.</p>
-            <img src="images/Porto-S.JoaoFestival2.jpg" alt="">
+            <h3 class="section-title">Current Event - The Douro and Porto Wine Festival</h3>
+            <img src="images/Porto-WineFest.jpg" alt="Wine Festival">
+            <p>The Douro & Porto Wine Festival celebrates Music, Gastronomy and Wine, in one of the most idyllic
+                settings in the world, attracting new audiences to the Douro region.
+                With an international class line-up, several stages, attractions and sensory experiences, always washed
+                down by the best nectars in the world: Douro wines.</p>
+            <img src="images/Porto-DouroVineyards.jpg" alt="Porto Wine Vineyards">
+            <p>The Douro & Porto Wine Festival is in the heart of one of the best wine regions in the world. During the
+                two days you can enjoy and toast with a generous selection of producers and labels, making your
+                experience in Lamego even more unforgettable.
+                Meet the already confirmed producers. In its spaces, inside the venue, you can consume it in a bottle
+                and glass or choose to take it home.</p>
         </section>
 
         <section class="weather-card card">
@@ -87,9 +87,29 @@
         </section>
 
         <section class="spotlights card">
-            <h3 class="section-title section-title3"> Member Spotlights</h3>
-            <div class="spot1 spot" id="companyList">
-                <!-- Placeholder for company spotlights -->
+            <h3 class="section-title section-title3">Member Spotlights</h3>
+        
+            <div class="grid-container">
+                <div class="spot spot1">
+                    <img src="images/DHL.png" alt="DHL">
+                    <p>Address: Av. D. João II, nº 51 4º, Lisboa, Portugal, 1990-085</p>
+                    <p>Phone: +351 211 127 207</p>
+                    <p>Website: <a href="http://www.dhlexpress.pt" target="_blank">www.dhlexpress.pt</a></p>
+                </div>
+        
+                <div class="spot spot2">
+                    <img src="images/ForumOceano.png" alt="Forum Oceano">
+                    <p>Address: UPTEC Mar, Sala C2, Av. Da Liberdade S/N 4450-718 Leça Da Palmeira – Portugal</p>
+                    <p>Phone: +351 220 120 764</p>
+                    <p>Website: <a href="http://www.forumoceano.pt/en" target="_blank">www.forumoceano.pt/en</a></p>
+                </div>
+        
+                <div class="spot spot3">
+                    <img src="images/Sage.png" alt="Sage">
+                    <p>Address: Edifício Olympus II, Avenida D. Afonso Henriques, 1462 - 2º, 4450-013 Matosinhos</p>
+                    <p>Phone: +351 22 120 24 00</p>
+                    <p>Website: <a href="http://www.sage.com/pt-pt" target="_blank">www.sage.com/pt-pt</a></p>
+                </div>
             </div>
         </section>
     </main>
@@ -116,6 +136,7 @@
         document.querySelector('.currentYear').textContent = new Date().getFullYear();
         document.querySelector('.lastModified').textContent = document.lastModified;
     </script>
+    <script src="scripts/weather.js"></script>
 </body>
 
 </html>
