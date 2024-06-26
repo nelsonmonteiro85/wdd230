@@ -18,10 +18,10 @@ document.addEventListener('DOMContentLoaded', function () {
 
         if (body.classList.contains('dark-mode')) {
             // Switch to dark mode image
-            heroImg.src = "chamber/images/Porto-ChamberN.jpg";
+            heroImg.src = "images/Porto-ChamberN.jpg";
         } else {
             // Switch to light mode image
-            heroImg.src = "chamber/images/Porto-ChamberD.jpg";
+            heroImg.src = "images/Porto-ChamberD.jpg";
         }
 
         // Toggle dark mode icon text content
