@@ -5,15 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Porto Chamber of Commerce</title>
-    <meta name="description"
-        content="WDD230 - Web Frontend Development, Nelson Monteiro - Chamber of Commerce Homepage">
+    <meta name="description" content="WDD230 - Web Frontend Development, Nelson Monteiro - Chamber of Commerce Homepage">
     <meta name="author" content="Nelson Monteiro">
     <link rel="icon" href="Port.ico">
     <meta property="og:title" content="Porto Chamber of Commerce Homepage">
     <meta property="og:type" content="website">
-    <meta property="og:image" content="#">
-    <meta property="og:url" content="#">
-    <!-- <link rel="stylesheet" href="styles/normalize.css"> -->
+    <meta property="og:image" content="images/social-share.png">
+    <meta property="og:url" content="https://yourwebsite.com">
     <link rel="stylesheet" href="styles/base.css">
     <link rel="stylesheet" href="styles/larger.css">
 </head>
@@ -21,7 +19,12 @@
 <body>
     <header>
         <nav>
-            <a class="logo">PortoCC</a>
+            <a class="logo" href="index.html">PortoCC</a>
+            <button class="hamburger" id="hamburger" aria-label="Toggle Menu">
+                <div></div>
+                <div></div>
+                <div></div>
+            </button>
             <div class="links">
                 <ul class="nav-list">
                     <li><a href="index.html">Home</a></li>
@@ -31,16 +34,10 @@
                 </ul>
             </div>
             <div id="darkModeToggle">🌙</div>
-            <!-- Hamburger menu -->
-            <div class="hamburger" id="hamburger">
-                <div></div>
-                <div></div>
-                <div></div>
-            </div>
         </nav>
 
         <div class="hero">
-            <img src="images/Porto-ChamberD.jpg" alt="Hero image" class="hero-img">
+            <img src="images/Porto-ChamberD.jpg" alt="Porto Chamber of Commerce building" class="hero-img">
         </div>
 
         <section id="hero-msg">
@@ -52,7 +49,7 @@
     </header>
 
     <main class="main-home">
-        <h2 class="main-home-tile"> Welcome to Porto Chamber of Commerce Website</h2>
+        <h2 class="main-home-title">Welcome to Porto Chamber of Commerce Website</h2>
 
         <section class="current-event card">
             <h3 class="section-title">Current Event - The Douro and Porto Wine Festival</h3>
@@ -72,10 +69,10 @@
         <section class="weather-card card">
             <h3 class="section-title">Weather</h3>
             <h4>Today's Weather</h4>
-            <p> Porto, Portugal</p>
+            <p>Porto, Portugal</p>
             <p id="current-temp"></p>
             <figure>
-                <img id="weather-icon" src="/" alt="">
+                <img id="weather-icon" src="/" alt="Weather Icon">
                 <figcaption></figcaption>
             </figure>
 
@@ -86,25 +83,24 @@
         </section>
 
         <section class="spotlights card">
-            <h3 class="section-title section-title3">Member Spotlights</h3>
-        
+            <h3 class="section-title">Member Spotlights</h3>
             <div class="grid-container">
                 <div class="spot spot1">
-                    <img src="images/DHL.png" alt="DHL">
+                    <img src="images/DHL.png" alt="DHL Logo">
                     <p>Address: Av. D. João II, nº 51 4º, Lisboa, Portugal, 1990-085</p>
                     <p>Phone: +351 211 127 207</p>
                     <p>Website: <a href="http://www.dhlexpress.pt" target="_blank">www.dhlexpress.pt</a></p>
                 </div>
-        
+
                 <div class="spot spot2">
-                    <img src="images/ForumOceano.png" alt="Forum Oceano">
+                    <img src="images/ForumOceano.png" alt="Forum Oceano Logo">
                     <p>Address: UPTEC Mar, Sala C2, Av. Da Liberdade S/N 4450-718 Leça Da Palmeira – Portugal</p>
                     <p>Phone: +351 220 120 764</p>
                     <p>Website: <a href="http://www.forumoceano.pt/en" target="_blank">www.forumoceano.pt/en</a></p>
                 </div>
-        
+
                 <div class="spot spot3">
-                    <img src="images/Sage.png" alt="Sage">
+                    <img src="images/Sage.png" alt="Sage Logo">
                     <p>Address: Edifício Olympus II, Avenida D. Afonso Henriques, 1462 - 2º, 4450-013 Matosinhos</p>
                     <p>Phone: +351 22 120 24 00</p>
                     <p>Website: <a href="http://www.sage.com/pt-pt" target="_blank">www.sage.com/pt-pt</a></p>
