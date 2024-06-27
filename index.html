@@ -41,14 +41,9 @@
 
   <main>
     <picture class="hero">
-      <!-- Image for mobile view (up to 400px) -->
-      <source media="(max-width: 400px)" srcset="images/Bountiful-Temple-Utah-mobile.webp">
-      
-      <!-- Image for larger views (up to 960px in landscape orientation) -->
-      <source media="(min-width: 401px) and (max-width: 960px) and (orientation: landscape)" srcset="images/Bountiful-Temple-Utah.webp">
-      
-      <!-- Fallback image for browsers that do not support srcset -->
-      <img src="images/Bountiful-Temple-Utah.jpg" alt="Bountiful Temple Utah">
+      <source srcset="images" media="(max-width: 400px)">
+      <source srcset="images/Bountiful-Temple-Utah.webp" media="(min-width: 401px) and (max-width: 960px) and (orientation: landscape)">
+      <img src="images/Bountiful-Temple-Utah.webp" alt="Bountiful Temple Utah">
     </picture>
     <hr>
     <h1>WDD 230: Web Frontend Development</h1>
