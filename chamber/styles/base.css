@@ -307,6 +307,8 @@ footer {
     cursor: pointer;
     top: 50%;
     left: 15px;
+    background-color: var(--nav-background-color);
+    border: var(--secondary-color);
 }
 
 .hamburger div {
