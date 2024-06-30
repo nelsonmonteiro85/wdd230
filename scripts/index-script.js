@@ -59,7 +59,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
         if (mainNav.classList.contains('open')) {
             // Slide the main content down slightly
-            mainContent.style.transform = 'translateY(1vh)'; // Adjust this value as needed
+            mainContent.style.transform = 'translateY(0vh)'; // Adjust this value as needed
             mainContent.style.transition = 'transform 0.3s ease'; // Smooth transition
         } else {
             // Slide the main content back to its original position
