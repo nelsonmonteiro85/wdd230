@@ -15,7 +15,8 @@
   <link rel="shortcut icon" href="NMWDD230.ico" type="image/x-icon">
   <meta property="og:title" content="Nelson Monteiro - WDD 230 - Web Frontend Development">
   <meta property="og:type" content="website">
-  <meta property="og:image" content="https://raw.githubusercontent.com/nelsonmonteiro85/wdd230/5e9c9ac800dee8ff5f3c4cc32b8d53f09bd8c4c1/images/HP-sample.png">
+  <meta property="og:image"
+    content="https://raw.githubusercontent.com/nelsonmonteiro85/wdd230/main/images/HP-sample.webp">
   <meta property="og:url" content="https://nelsonmonteiro85.github.io/wdd230/">
 </head>
 
@@ -43,7 +44,8 @@
     <div class="hero">
       <picture>
         <source srcset="images/Bountiful-Temple-Utah-mobile.webp" media="(max-width: 400px)">
-        <source srcset="images/Bountiful-Temple-Utah.webp" media="(min-width: 401px) and (max-width: 960px) and (orientation: landscape)">
+        <source srcset="images/Bountiful-Temple-Utah.webp"
+          media="(min-width: 401px) and (max-width: 960px) and (orientation: landscape)">
         <img src="images/Bountiful-Temple-Utah.webp" alt="Bountiful Temple Utah">
       </picture>
       <span>Bountiful Temple - Utah</span>
@@ -55,20 +57,45 @@
       <section class="card">
         <h2>Learning Activities</h2>
         <ul class="no-bullets">
-          <li>Week 01: <a href="week01/holygrail.html">CSS Layout Review W01</a> | <a href="week01/media-query.html">Media Query Example</a> | <a href="week01/chamber-site-plan.html">Chamber Site Plan</a></li>
-          <li>Week 02: <a href="week02/design.html">Web Design Principles</a> | <a href="https://codepen.io/nelsonmonteiro85/pen/ExzoWJQ">Responsive "Hamburguer" Menu</a> | <a href="week02/bom.html">Book Of Mormon - Top 10</a></li>
-          <li>Week 03: <a href="week03/images/landscape.webp">WEBP Landscape</a> | <a href="week03/lazyload.html">Lazy Loading Favourite Games</a> | <a href="week03/responsive-images.html">Responsive Images: srcset</a></li>
-          <li>Week 04: <a href="week04/example1.html">Example 1 W04</a> | <a href="week04/example2.html">Example 2 W04</a></li>
-          <li>Week 05: <a href="week05/example1.html">Example 1 W05</a> | <a href="week05/example2.html">Example 2 W05</a></li>
-          <li>Week 06: <a href="week06/example1.html">Example 1 W06</a> | <a href="week06/example2.html">Example 2 W06</a></li>
-          <li>Week 07: <a href="week07/example1.html">Example 1 W07</a> | <a href="week07/example2.html">Example 2 W07</a></li>
+          <li>Week 01: <a href="week01/holygrail.html">CSS Layout Review W01</a> | <a
+              href="week01/media-query.html">Media Query Example</a> | <a href="week01/chamber-site-plan.html">Chamber
+              Site Plan</a></li>
+          <li>Week 02: <a href="week02/design.html">Web Design Principles</a> | <a
+              href="https://codepen.io/nelsonmonteiro85/pen/ExzoWJQ">Responsive "Hamburguer" Menu</a> | <a
+              href="week02/bom.html">Book Of Mormon - Top 10</a></li>
+          <li>Week 03: <a href="week03/images/landscape.webp">WEBP Landscape</a> | <a href="week03/lazyload.html">Lazy
+              Loading Favourite Games</a> | <a href="week03/responsive-images.html">Responsive Images: srcset</a></li>
+          <li>Week 04: <a href="week04/example1.html">Example 1 W04</a> | <a href="week04/example2.html">Example 2
+              W04</a></li>
+          <li>Week 05: <a href="week05/example1.html">Example 1 W05</a> | <a href="week05/example2.html">Example 2
+              W05</a></li>
+          <li>Week 06: <a href="week06/example1.html">Example 1 W06</a> | <a href="week06/example2.html">Example 2
+              W06</a></li>
+          <li>Week 07: <a href="week07/example1.html">Example 1 W07</a> | <a href="week07/example2.html">Example 2
+              W07</a></li>
         </ul>
       </section>
       <section class="card">
         <h2>Information</h2>
-        <p>Weather: [Placeholder]</p>
-        <p>Number of visits: [Placeholder]</p>
-      </section>
+        <div class="info-column">
+            <div class="weather-info">
+                <p>Temperature: <span id="current-temp"></span></p>
+                <img id="weather-icon" src="https://via.placeholder.com/50" alt="Weather Icon">
+                <p id="weather-description"></p>
+            </div>
+            <div class="visit-info">
+                <p>Number of visits: <span class="visit-counter"></span></p>
+            </div>
+        </div>
+    </section>
+    </div>
+    <div class="map-container">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d57024.70587227457!2d-1.1250198847489028!3d50.82820458827368!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4874437113034c4d%3A0xb7f2f1d86daa0604!2s90%20Laburnum%20Rd%2C%20Waterlooville%20PO7%207AX!5e0!3m2!1sen!2suk!4v1719869524649!5m2!1sen!2suk"
+        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade" title="Google Maps location of Nelson Monteiro"
+        sandbox="allow-scripts allow-same-origin">
+      </iframe>
     </div>
   </main>
 

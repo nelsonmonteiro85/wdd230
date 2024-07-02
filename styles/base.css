@@ -13,10 +13,14 @@
     --paragraph-font: "Ubuntu", sans-serif;
 
     /* These colors below should be chosen from among your palette colors above */
-    --headline-color-on-white: #003135;       /* Headlines on a white background */
-    --headline-color-on-color: #afdde5;       /* Headlines on a colored background */
-    --paragraph-color-on-white: #003135;      /* Paragraph text on a white background */
-    --paragraph-color-on-color: #FFFFFF;      /* Paragraph text on a colored background */
+    --headline-color-on-white: #003135;
+    /* Headlines on a white background */
+    --headline-color-on-color: #afdde5;
+    /* Headlines on a colored background */
+    --paragraph-color-on-white: #003135;
+    /* Paragraph text on a white background */
+    --paragraph-color-on-color: #FFFFFF;
+    /* Paragraph text on a colored background */
     --paragraph-background-color: #003135;
     --nav-link-color: #003135;
     --nav-background-color: #ff7700;
@@ -85,7 +89,8 @@ body {
     }
 }
 
-h1, h2 {
+h1,
+h2 {
     font-family: var(--heading-font);
     text-align: center;
 }
@@ -212,13 +217,13 @@ nav a:hover {
     position: relative;
 }
 
-.hero img{
+.hero img {
     width: 100%;
     height: auto;
     display: block;
 }
 
-.hero span{
+.hero span {
     position: absolute;
     top: 10%;
     left: 8%;
@@ -287,6 +292,22 @@ body.dark-mode h2 {
     color: #ff7700;
 }
 
+body.dark-mode #current-temp {
+    color: var(--accent2-color);
+}
+
+body.dark-mode .hero span {
+    background:
+        /* Dark background in the center */
+        linear-gradient(rgba(18, 18, 18, 0.4), rgba(18, 18, 18, 0.4)),
+        /* Vignette effect using radial gradient */
+        radial-gradient(ellipse closest-side, rgba(18, 18, 18, 0.8) 30%, rgba(18, 18, 18, 0) 100%);
+}
+
+body.dark-mode .visit-info {
+    border-top: 1px dotted var(--accent2-color);
+}
+
 body.dark-mode footer {
     background-color: #1f1f1f;
 }
@@ -332,6 +353,67 @@ hr {
 
 .card p {
     text-align: center;
+}
+
+.weather-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.weather-info p {
+    margin: 0;
+}
+
+#current-temp {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+}
+
+#weather-icon {
+    display: block;
+    margin: 0 auto;
+    width: 50px;
+    height: 50px;
+}
+
+figcaption {
+    font-style: italic;
+    color: red;
+}
+
+.visit-info {
+    border-top: 1px dotted var(--primary-color);
+    padding-top: 10px;
+    margin-top: 15px;
+}
+
+.visit-info p {
+    margin: 0;
+}
+
+.map-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+    margin: 20px 40px -100px 40px;
+    border-radius: 6px;
+    box-shadow: 0 0 10px rgba(255, 119, 0, 20);
+    margin-top: 30px;
+    margin-bottom: -150px;
+}
+
+.map-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
 }
 
 footer {
@@ -396,6 +478,10 @@ footer {
     header span {
         font-size: 40px;
         margin-right: 8%;
+    }
+
+    .map-container {
+        margin-bottom: -80px;
     }
 
 }

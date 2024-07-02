@@ -28,7 +28,31 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 
-    // Dark mode toggle functionality
+    // Function to update and display the visit counter
+    function updateVisitCounter() {
+        const visitCounter = document.querySelector('.visit-counter');
+        let numVisits = localStorage.getItem('pageVisits');
+
+        // Initialize visit count if it doesn't exist in localStorage
+        if (numVisits === null) {
+            localStorage.setItem('pageVisits', '0');
+            numVisits = 0;
+        } else {
+            numVisits = parseInt(numVisits);
+        }
+
+        // Increment the visit count
+        numVisits++;
+        localStorage.setItem('pageVisits', numVisits.toString());
+
+        // Update the visit counter display
+        visitCounter.textContent = numVisits.toString();
+    }
+
+    // Call the function to update and display the visit counter on page load
+    updateVisitCounter();
+
+    // Dark mode toggle functionality (existing code remains unchanged)
     const darkModeToggle = document.getElementById('darkModeToggle');
     const body = document.body;
 
@@ -56,7 +80,7 @@ document.addEventListener('DOMContentLoaded', function () {
         localStorage.removeItem('darkMode');
     }
 
-    // Hamburger menu toggle functionality
+    // Hamburger menu toggle functionality (existing code remains unchanged)
     const hamburger = document.getElementById('hamburger');
     const mainNav = document.querySelector('.main-nav');
     const mainContent = document.querySelector('main');
@@ -74,4 +98,39 @@ document.addEventListener('DOMContentLoaded', function () {
             mainContent.style.transform = 'translateY(0)';
         }
     });
+
+    async function fetchWeather() {
+        const temperature = document.querySelector("#current-temp");
+        const icon = document.querySelector("#weather-icon");
+        const description = document.querySelector("#weather-description");
+
+        const currentWeatherUrl = "https://api.openweathermap.org/data/2.5/weather?lat=41.00&lon=-8.64&units=metric&APPID=7df97f2950fc6d28758ce291800a8d12";
+
+        try {
+            const response = await fetch(currentWeatherUrl);
+            if (!response.ok) {
+                throw new Error(`HTTP error! Status: ${response.status}`);
+            }
+            const weatherData = await response.json();
+            displayWeather(weatherData);
+        } catch (error) {
+            console.error('Error fetching current weather:', error);
+        }
+
+        function displayWeather(data) {
+            temperature.textContent = Math.round(data.main.temp) + "°C";
+            icon.src = `https://openweathermap.org/img/w/${data.weather[0].icon}.png`;
+            icon.alt = data.weather[0].description;
+            description.textContent = titleCase(data.weather[0].description);
+        }
+
+        function titleCase(str) {
+            return str.toLowerCase().split(" ").map(function (word) {
+                return word.charAt(0).toUpperCase() + word.slice(1);
+            }).join(" ");
+        }
+    }
+
+    // Initial fetch and display of current weather
+    fetchWeather();
 });
