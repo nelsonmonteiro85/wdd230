@@ -52,7 +52,7 @@ document.addEventListener('DOMContentLoaded', function () {
     // Call the function to update and display the visit counter on page load
     updateVisitCounter();
 
-    // Dark mode toggle functionality (existing code remains unchanged)
+    // Dark mode toggle functionality
     const darkModeToggle = document.getElementById('darkModeToggle');
     const body = document.body;
 
@@ -80,7 +80,7 @@ document.addEventListener('DOMContentLoaded', function () {
         localStorage.removeItem('darkMode');
     }
 
-    // Hamburger menu toggle functionality (existing code remains unchanged)
+    // Hamburger menu toggle functionality
     const hamburger = document.getElementById('hamburger');
     const mainNav = document.querySelector('.main-nav');
     const mainContent = document.querySelector('main');
