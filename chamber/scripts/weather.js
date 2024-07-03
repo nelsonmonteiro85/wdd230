@@ -1,5 +1,3 @@
-// weather.js
-
 const temperature = document.querySelector("#current-temp");
 const icon = document.querySelector("#weather-icon");
 const figcaption = document.querySelector("figcaption");

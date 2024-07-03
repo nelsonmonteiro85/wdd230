@@ -45,7 +45,7 @@ nav {
 }
 
 .links {
-    display: none; /* Hide links by default on mobile */
+    display: none;
     width: 100%;
     flex-direction: column;
     align-items: center;
@@ -115,7 +115,7 @@ nav {
 
 .logo img {
     width: auto;
-    height: 40px; /* Adjust the height as needed */
+    height: 40px;
     display: block;
 }
 
@@ -369,11 +369,11 @@ body.dark-mode {
 }
 
 .dark-mode .hero-img.light-mode-img {
-    display: none; /* Hide light mode image in dark mode */
+    display: none;
 }
 
 .dark-mode .hero-img.dark-mode-img {
-    display: block; /* Show dark mode image in dark mode */
+    display: block;
 }
 
 .dark-mode .main-home {
