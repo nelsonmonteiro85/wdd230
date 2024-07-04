@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Porto Chamber of Commerce</title>
-    <meta name="description" content="WDD230 - Web Frontend Development, Nelson Monteiro - Chamber of Commerce Homepage">
+    <meta name="description"
+        content="WDD230 - Web Frontend Development, Nelson Monteiro - Chamber of Commerce Homepage">
     <meta name="author" content="Nelson Monteiro">
     <link rel="icon" href="Port.ico">
     <meta property="og:title" content="Porto Chamber of Commerce Homepage">
@@ -41,39 +42,77 @@
         </section>
     </header>
 
-    <main>
+    <main class="discover-page">
         <section class="card left-card">
             <h2>History</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla gravida justo nec sollicitudin sodales. Vestibulum ornare sit amet turpis ac egestas. Duis sit amet hendrerit ipsum. Aliquam erat volutpat. Mauris congue nulla nisi, in gravida est vestibulum sed. Sed laoreet ex ac velit laoreet venenatis.</p>
+            <hr>
+            <p>Porto, city and port, northern Portugal. The city lies along the Douro River, 2 miles (3 km) from the
+                river’s mouth on the Atlantic Ocean and 175 miles (280 km) north of Lisbon. World-famous for its port
+                wine, Porto is Portugal’s second largest city and is the commercial and industrial centre for the zone
+                north of the Mondego River. The historic centre of Porto was designated a UNESCO World Heritage site in
+                1996.</p>
+            <hr>
+            <h3>Fact:</h3>
+            <p>The City's nickname is Invicta. Invicta means invincible in Portuguese. This nickname is coming from the
+                19th Century Portuguese civil war, when Porto was never conquered and even survived a siege that lasted
+                more than a year.</p>
         </section>
-    
+
         <section class="card right-card">
             <h2>Gallery</h2>
             <div class="gallery">
-                <div class="gallery-row">
-                    <div class="gallery-item">
-                        <img src="images/photo1.jpg" alt="Photo 1">
-                    </div>
-                    <div class="gallery-item">
-                        <img src="images/photo2.jpg" alt="Photo 2">
-                    </div>
-                    <div class="gallery-item">
-                        <img src="images/photo3.jpg" alt="Photo 3">
-                    </div>
+                <div class="gallery-item">
+                    <img src="images/Gal-Porto-LivrariaLello.webp" alt="Lello Bookstore">
                 </div>
-                <div class="gallery-row">
-                    <div class="gallery-item">
-                        <img src="images/photo4.jpg" alt="Photo 4">
-                    </div>
-                    <div class="gallery-item">
-                        <img src="images/photo5.jpg" alt="Photo 5">
-                    </div>
-                    <div class="gallery-item">
-                        <img src="images/photo6.jpg" alt="Photo 6">
-                    </div>
+                <div class="gallery-item">
+                    <img src="images/Gal-Porto-RosaMota.webp" alt="Pavilion Rosa Mota">
+                </div>
+                <div class="gallery-item">
+                    <img src="images/Gal-Porto-PonteD.Luis2.webp" alt="D.Luis Bridge2">
+                </div>
+                <div class="gallery-item">
+                    <img src="images/Gal-Porto-Douro.webp" alt="Douro River">
+                </div>
+                <div class="gallery-item">
+                    <img src="images/Gal-Porto-Hitorical2.webp" alt="Tram Porto">
+                </div>
+                <div class="gallery-item">
+                    <img src="images/Gal-Porto-Ribeira2.webp" alt="Ribeira">
                 </div>
             </div>
         </section>
+
+        <section class="card demographics-card">
+            <h2 class="section-title">Demographics</h2>
+            <h3>Porto</h3>
+            <div class="grid-container">
+                <div class="demographics-section">
+                    <h4>Country: Portugal</h4>
+                    <ul>
+                        <li>Region: North</li>
+                        <li>Subregion: Big Porto</li>
+                        <li>District: Porto</li>
+                    </ul>
+                </div>
+                <div class="demographics-section">
+                    <h4>Area</h4>
+                    <ul>
+                        <li>Municipality: 41.42 km² (15.99 sq mi)</li>
+                        <li>Elevation: 104 m (341 ft)</li>
+                    </ul>
+                </div>
+                <div class="demographics-section">
+                    <h4>Population</h4>
+                    <ul>
+                        <li>Municipality: 248,769</li>
+                        <li>Density: 5,596.3/km² (14,494/sq mi)</li>
+                        <li>Urban: 1,375,679</li>
+                        <li>Metropolitan area: 1,802,664</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        
     </main>
 
     <footer>
@@ -98,8 +137,7 @@
         document.querySelector('.currentYear').textContent = new Date().getFullYear();
         document.querySelector('.lastModified').textContent = document.lastModified;
     </script>
-    <script src="scripts/index-chamber.js"></script>
-    <script src="scripts/weather.js"></script>
+    <script src="scripts/discover-chamber.js"></script>
 </body>
 
 </html>

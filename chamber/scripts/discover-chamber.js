@@ -38,28 +38,28 @@ document.addEventListener('DOMContentLoaded', function () {
     // Hamburger menu toggle functionality
     const hamburger = document.getElementById('hamburger');
     const links = document.querySelector('.links');
-    const mainContent = document.querySelector('.main-home');
-    const heroSection = document.querySelector('.hero');
-    const heroMsg = document.querySelector('#hero-msg');
-    const footer = document.querySelector('footer');
+    const heroSection = document.querySelector('main.discover-page'); // Adjusted selector
+    const heroMsg = document.querySelector('#hero-msg'); // Adjusted selector
+    const footer = document.querySelector('footer'); // Adjusted selector
 
     hamburger.addEventListener('click', function() {
         hamburger.classList.toggle('open');
         links.classList.toggle('open');
 
-        if (links.classList.contains('open')) {
-            const linksHeight = links.offsetHeight;
+        if (heroSection && heroMsg && footer) {
+            if (links.classList.contains('open')) {
+                const linksHeight = links.offsetHeight;
 
-            heroSection.style.transform = `translateY(${linksHeight}px)`;
-            heroMsg.style.transform = `translateY(${linksHeight}px)`;
-            mainContent.style.transform = `translateY(${linksHeight}px)`;
-            footer.style.transform = `translateY(${linksHeight}px)`;
-            mainContent.style.transition = 'transform 0.3s ease';
+                heroSection.style.transform = `translateY(${linksHeight}px)`;
+                heroMsg.style.transform = `translateY(${linksHeight}px)`;
+                footer.style.transform = `translateY(${linksHeight}px)`;
+            } else {
+                heroSection.style.transform = 'translateY(0)';
+                heroMsg.style.transform = 'translateY(0)';
+                footer.style.transform = 'translateY(0)';
+            }
         } else {
-            heroSection.style.transform = 'translateY(0)';
-            heroMsg.style.transform = 'translateY(0)';
-            mainContent.style.transform = 'translateY(0)';
-            footer.style.transform = 'translateY(0)';
+            console.error('One or more elements not found.');
         }
     });
 });    
