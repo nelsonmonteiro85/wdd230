@@ -42,7 +42,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const heroMsg = document.querySelector('#hero-msg'); // Adjusted selector
     const footer = document.querySelector('footer'); // Adjusted selector
 
-    hamburger.addEventListener('click', function() {
+    hamburger.addEventListener('click', function () {
         hamburger.classList.toggle('open');
         links.classList.toggle('open');
 
@@ -62,4 +62,27 @@ document.addEventListener('DOMContentLoaded', function () {
             console.error('One or more elements not found.');
         }
     });
+
+    // Local storage for last visit date
+    const lastVisitKey = 'lastVisit';
+    const messageElement = document.getElementById('message');
+
+    const lastVisit = localStorage.getItem(lastVisitKey);
+    const now = Date.now();
+
+    if (lastVisit) {
+        const daysBetweenVisits = Math.floor((now - lastVisit) / (1000 * 60 * 60 * 24));
+
+        if (daysBetweenVisits < 1) {
+            messageElement.textContent = "Back so soon! Awesome!";
+        } else if (daysBetweenVisits === 1) {
+            messageElement.textContent = "You last visited 1 day ago.";
+        } else {
+            messageElement.textContent = `You last visited ${daysBetweenVisits} days ago.`;
+        }
+    } else {
+        messageElement.textContent = "Welcome! Let us know if you have any questions.";
+    }
+
+    localStorage.setItem(lastVisitKey, now);
 });    
