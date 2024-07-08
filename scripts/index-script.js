@@ -1,8 +1,15 @@
 document.addEventListener('DOMContentLoaded', function () {
+    console.log('Script loaded successfully.');
+
     // Function to toggle week links visibility and save state in local storage
     function toggleLinks(id) {
         const weekLinksToShow = document.getElementById(id);
         const weekLinks = document.querySelectorAll('.week-links');
+
+        if (!weekLinksToShow) {
+            console.error(`Element with ID '${id}' not found.`);
+            return;
+        }
 
         if (weekLinksToShow.style.display === 'block') {
             weekLinksToShow.style.display = 'none';
@@ -31,21 +38,15 @@ document.addEventListener('DOMContentLoaded', function () {
     // Function to update and display the visit counter
     function updateVisitCounter() {
         const visitCounter = document.querySelector('.visit-counter');
-        let numVisits = localStorage.getItem('pageVisits');
-
-        // Initialize visit count if it doesn't exist in localStorage
-        if (numVisits === null) {
-            localStorage.setItem('pageVisits', '0');
-            numVisits = 0;
-        } else {
-            numVisits = parseInt(numVisits);
+        if (!visitCounter) {
+            console.error('Visit counter element not found.');
+            return;
         }
 
-        // Increment the visit count
+        let numVisits = localStorage.getItem('pageVisits');
+        numVisits = numVisits ? parseInt(numVisits) : 0;
         numVisits++;
         localStorage.setItem('pageVisits', numVisits.toString());
-
-        // Update the visit counter display
         visitCounter.textContent = numVisits.toString();
     }
 
@@ -55,6 +56,9 @@ document.addEventListener('DOMContentLoaded', function () {
     // Dark mode toggle functionality
     const darkModeToggle = document.getElementById('darkModeToggle');
     const body = document.body;
+    if (!darkModeToggle || !body) {
+        console.error('Dark mode toggle or body element not found.');
+    }
 
     if (localStorage.getItem('darkMode') === 'enabled') {
         enableDarkMode();
@@ -85,24 +89,32 @@ document.addEventListener('DOMContentLoaded', function () {
     const mainNav = document.querySelector('.main-nav');
     const mainContent = document.querySelector('main');
 
+    if (!hamburger || !mainNav || !mainContent) {
+        console.error('Hamburger, main nav, or main content element not found.');
+    }
+
     hamburger.addEventListener('click', () => {
         hamburger.classList.toggle('open');
         mainNav.classList.toggle('open');
 
         if (mainNav.classList.contains('open')) {
-            // Slide the main content down slightly
             mainContent.style.transform = 'translateY(0vh)';
             mainContent.style.transition = 'transform 0.3s ease'; // Smooth transition
         } else {
-            // Slide the main content back to its original position
             mainContent.style.transform = 'translateY(0)';
         }
     });
 
+    // Function to fetch and display current weather
     async function fetchWeather() {
         const temperature = document.querySelector("#current-temp");
         const icon = document.querySelector("#weather-icon");
         const description = document.querySelector("#weather-description");
+
+        if (!temperature || !icon || !description) {
+            console.error('Weather elements not found.');
+            return;
+        }
 
         const currentWeatherUrl = "https://api.openweathermap.org/data/2.5/weather?lat=41.00&lon=-8.64&units=metric&APPID=7df97f2950fc6d28758ce291800a8d12";
 

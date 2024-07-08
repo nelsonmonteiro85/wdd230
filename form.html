@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nelson Monteiro - WDD 230 - Web Frontend Development</title>
+    <meta name="description" content="WDD 230 - Web Frontend Development. Nelson Monteiro's portal for learning frontend development.">
+    <meta name="author" content="Nelson Monteiro">
+    <link rel="stylesheet" href="styles/custom-normalize.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/larger.css">
+    <link rel="stylesheet" href="styles/form.css">
+    <link rel="shortcut icon" href="NMWDD230.ico" type="image/x-icon">
+    <meta property="og:title" content="Nelson Monteiro - WDD 230 - Web Frontend Development">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://raw.githubusercontent.com/nelsonmonteiro85/wdd230/main/images/HP-sample.webp">
+    <meta property="og:url" content="https://nelsonmonteiro85.github.io/wdd230/">
+</head>
+<body>
+    <header>
+        <img src="images/profile-opt.webp" alt="Profile Picture">
+        <span>Nelson Monteiro</span>
+        <button id="darkModeToggle">🌙</button>
+        <!-- Hamburger menu -->
+        <div class="hamburger" id="hamburger">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </header>
+
+    <nav id="menu" class="main-nav">
+        <a href="index.html">Home</a>
+        <a href="chamber/index.html">Chamber</a>
+        <a href="#">Site Plan</a>
+        <a href="form.html" class="active">Form</a>
+    </nav>
+
+    <main class="form">
+        <h1>꧁✬◦°˚°◦. Sign Up .◦°˚°◦✬꧂</h1>
+
+        <form id="signupForm" method="get" action="record.html">
+            <fieldset>
+                <legend>Sign Up Form</legend>
+                <label>Username:* <input type="text" id="username" name="username" required></label>
+                <label>Password:* <input type="password" id="pass1" name="password" placeholder="Alphanumeric characters (Aa-Zz and 0-9)" required pattern="^[a-zA-Z0-9]{8,}$"></label>
+                <label>Confirm Password:* <input type="password" id="pass2" name="confirmPassword" required></label>
+                <div id="passwordError" class="error"></div>
+                <label>Email:* <input type="email" id="email" name="email" required pattern="[a-zA-Z0-9._%+-]+@byui\.edu" placeholder="someone123@byui.edu" title="Please enter a valid email address"></label>
+                <div id="emailError" class="error"></div>
+                <label>Page Rating: <input type="range" id="pageRating" name="pageRating" min="1" max="10" step="1" list="rangevalues" oninput="updateValue(this.value)">
+                    <datalist id="rangevalues">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                    </datalist>
+                </label>
+                <div><output for="pageRating" id="ratingOutput">1</output></div>    
+            </fieldset>
+            <input type="submit" value="Signing Up">
+        </form>
+    </main>
+
+    <footer>
+        <p class="copyright">&copy; <span id="currentYear"></span> Nelson Monteiro, Hampshire, United Kingdom</p>
+        <p id="lastModified"></p>
+    </footer>
+
+    <script src="scripts/getDates.js"></script>
+    <script src="scripts/formvalidation.js"></script>
+</body>
+</html>
