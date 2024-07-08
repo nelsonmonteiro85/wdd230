@@ -160,7 +160,7 @@ nav {
     color: var(--accent1-color);
 }
 
-.logo:hover{
+.logo:hover {
     text-decoration: underline;
 }
 
@@ -274,7 +274,7 @@ img {
 }
 
 div .forecast-item {
-    display:flex;
+    display: flex;
 }
 
 .weather-card {
@@ -377,7 +377,8 @@ hr {
     float: right;
     margin-left: 10px;
     border: 1px solid var(--secondary-color);
-    box-shadow: 0 0 20px var(--secondary-color);;
+    box-shadow: 0 0 20px var(--secondary-color);
+    ;
     border-radius: 5px;
     width: 400px;
     height: auto;
@@ -438,7 +439,8 @@ hr {
 }
 
 .gallery-item img:hover {
-    transform: scale(1.9); /* Zoom out effect on hover */
+    transform: scale(1.9);
+    /* Zoom out effect on hover */
     z-index: 2;
 }
 
@@ -473,19 +475,24 @@ footer {
 
 /* Hamburger menu styles */
 .hamburger {
-    display: none
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    display: block; /* Ensuring the button is displayed as block */
 }
 
-.hamburger div {
+.hamburger .line {
+    display: block;
     width: 25px;
     height: 3px;
     background-color: var(--secondary-color);
-    margin: 3px 0;
-    transition: 0.4s;
+    margin:3px 0;
+    transition: transform 0.4s ease, opacity 0.4s ease; /* Smooth transition for animation */
 }
 
 #menu::before {
-    content: "☰";
+    content: "☰"; /* Hamburger icon symbol */
     color: var(--secondary-color);
     padding-right: 0.5em;
 }
@@ -496,15 +503,15 @@ footer {
 }
 
 /* Hamburger animation to X */
-.hamburger.open div:nth-child(1) {
+.hamburger.open .line:nth-child(1) {
     transform: rotate(-45deg) translate(-5px, 6px);
 }
 
-.hamburger.open div:nth-child(2) {
-    opacity: 0;
+.hamburger.open .line:nth-child(2) {
+    opacity: 0; /* Hide middle line when open */
 }
 
-.hamburger.open div:nth-child(3) {
+.hamburger.open .line:nth-child(3) {
     transform: rotate(45deg) translate(-5px, -6px);
 }
 
@@ -534,6 +541,10 @@ body.dark-mode {
     color: #ffffff;
 }
 
+.dark-mode .main-home-title{
+    color: var(--accent1-color);
+}
+
 .dark-mode .hero-img.light-mode-img {
     display: none;
 }
@@ -548,7 +559,114 @@ body.dark-mode {
 
 /* ************************************************************* */
 
+/* Join Page */
+
+.main-join {
+    margin: 30px auto;
+    border: 1px solid var(--secondary-color);
+    background-color: var(--primary-color);
+    padding: 20px;
+    border-radius: 5px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+/* Form Styles */
+#myForm form {
+    background-color: var(--primary-color);
+    margin: 20px;
+    flex: 1 1 45%;
+    max-width: 500px;
+}
+
+#myForm .input {
+    display: flex;
+    flex-direction: column;
+    padding-top: 0.8rem;
+}
+
+#myForm label input,
+select,
+textarea {
+    display: block;
+    border: 1px solid var(--secondary-color);
+    border-radius: 5px;
+    font-size: 1rem;
+    width: 100%;
+    max-width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+#myForm input:focus,
+textarea:focus {
+    outline: none;
+    border-color: var(--secondary-color);
+}
+
+#myForm button {
+    margin-top: 2em;
+    padding: 0.8em;
+    background-color: var(--secondary-color);
+    color: var(--accent1-color);
+    border: 1px solid;
+    border-radius: 5px;
+    width: 100%;
+}
+
+#myForm button:hover {
+    background-color: var(--headline-color-on-color);
+    color: var(--secondary-color);
+    box-shadow: 0 0 30px var(--secondary-color);
+}
+
+/* Membership Styles */
+.membership {
+    flex: 1 1 45%;
+    background-color: var(--secondary-color);
+    color: var(--accent1-color);
+    padding: 2em;
+    margin: 20px;
+    border-radius: 5px;
+}
+
+.member-title {
+    text-align: center;
+}
+
+.member-card {
+    background-color: #fff;
+    color: #283d3b;
+    padding: 0.5em 2em;
+    margin: 1em 0;
+    border: #283d3b solid 2px;
+    border-radius: 4px;
+}
+
+.main-thanks {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    color: var(--secondary-color);
+    padding: 20px;
+}
+
+
 @media (max-width: 768px) {
+    .main-join {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #myForm label input,
+    #myForm select,
+    #myForm textarea {
+        max-width: 94%;
+    }
+
     .discover-page {
         grid-template-columns: 1fr;
     }
@@ -568,7 +686,7 @@ body.dark-mode {
         height: auto;
         margin: 10px 0;
     }
-    
+
     .gallery-card {
         grid-column: 1 / -1;
         padding: 1em;
@@ -619,14 +737,16 @@ body.dark-mode {
     }
 
     .hamburger {
-        display: flex; /* Show hamburger on mobile */
+        display: flex;
+        /* Show hamburger on mobile */
         flex-direction: column;
         cursor: pointer;
         top: 50%;
         left: 15px;
         background-color: var(--nav-background-color);
         border: var(--secondary-color);
-        z-index: 11; /* Ensure it's above other content */
+        z-index: 11;
+        /* Ensure it's above other content */
     }
 
     .links {
@@ -634,14 +754,17 @@ body.dark-mode {
         top: 100%;
         left: 0;
         width: 100%;
-        display: none; /* Initially hide links */
+        display: none;
+        /* Initially hide links */
         background-color: var(--nav-background-color);
         color: var(--nav-link-color);
-        z-index: 10; /* Ensure it's below hamburger */
+        z-index: 10;
+        /* Ensure it's below hamburger */
     }
 
     .links.open {
-        display: flex; /* Show links when hamburger is clicked */
+        display: flex;
+        /* Show links when hamburger is clicked */
         flex-direction: column;
     }
 
@@ -650,7 +773,8 @@ body.dark-mode {
         margin: 0;
         padding: 0;
         display: flex;
-        flex-direction: column; /* Adjust layout as needed */
+        flex-direction: column;
+        /* Adjust layout as needed */
         align-items: center;
     }
 
@@ -675,7 +799,7 @@ body.dark-mode {
     }
 
     .discover-card {
-        grid-column: 1 / -1; 
+        grid-column: 1 / -1;
     }
 
     .discover-card img {

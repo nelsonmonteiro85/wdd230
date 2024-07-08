@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Porto Chamber of Commerce</title>
+    <meta name="description" content="WDD230 - Web Frontend Development, Nelson Monteiro - Chamber of Commerce Homepage">
+    <meta name="author" content="Nelson Monteiro">
+    <link rel="icon" href="Port.ico">
+    <meta property="og:title" content="Porto Chamber of Commerce Homepage">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="images/Chamber-Homepage-media.webp">
+    <meta property="og:url" content="https://nelsonmonteiro85.github.io/wdd230/chamber/index.html">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/larger.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <a class="logo" href="index.html">PortoCC</a>
+            <button class="hamburger" id="hamburger" aria-label="Toggle Menu">
+                <span class="line"></span>
+                <span class="line"></span>
+                <span class="line"></span>
+            </button>
+            <div class="links">
+                <ul class="nav-list">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="discover.html">Discover</a></li>
+                    <li><a href="#">Directory</a></li>
+                    <li><a class="join button" href="join.html">Join</a></li>
+                </ul>
+            </div>
+            <div id="darkModeToggle">🌙</div>
+        </nav>
+
+        <section id="hero-msg">
+            <h1 class="title">Porto Chamber of Commerce</h1>
+        </section>
+    </header>
+
+    <main class="main-join">
+        <form method="get" action="thankyou.html" id="myForm">
+            <h2 class="member-title">Become a Member of Porto Chamber of Commerce</h2>
+    
+            <label class="input">First Name*
+                <input type="text" id="firstName" name="firstName" required>
+            </label>
+    
+            <label class="input">Last Name*
+                <input type="text" id="lastName" name="lastName" required>
+            </label>
+    
+            <label class="input">Title / Position
+                <input type="text" id="titlePosition" name="titlePosition" pattern="[a-zA-Z\- ]{7,}" title="Enter at least 7 alphabetic characters, spaces, or hyphens">
+            </label>
+    
+            <label class="input">Email*
+                <input type="email" id="email" name="email" required placeholder="someone@byui.edu">
+            </label>
+    
+            <label class="input">Phone Number*
+                <input type="tel" id="tel" name="phone" required placeholder="1235551234">
+            </label>
+    
+            <label class="input">Business / Organization's name*
+                <input type="text" id="businessName" name="businessName" required>
+            </label>
+    
+            <label class="input">Membership Level:
+                <select name="membership">
+                    <option value="">Please Select</option>
+                    <option value="np">NP Membership is for non profit organizations and there is no fee</option>
+                    <option value="bronze">Bronze Membership</option>
+                    <option value="silver">Silver Membership</option>
+                    <option value="gold">Gold Membership</option>
+                </select>
+            </label>
+    
+            <label class="input">Description:
+                <textarea id="description" name="description" rows="4" cols="50"></textarea>
+            </label>
+    
+            <!-- Hidden timestamp field -->
+            <input type="hidden" id="timestamp" name="timestamp">
+    
+            <button type="submit">Join Chamber</button>
+        </form>
+    
+        <!-- Membership benefits section -->
+        <section class="membership">
+            <h2 class="member-title">Membership Benefits</h2>
+            <div class="member-card">
+                <h3>Non Profit</h3>
+                <p><strong>Cost: </strong>No fees.</p>
+                <strong>Benefits: </strong>
+                <ul>
+                    <li>Regular updates and newsletters.</li>
+                    <li>Networking opportunities.</li>
+                </ul>
+            </div>
+            <div class="member-card">
+                <h3>Bronze Membership</h3>
+                <p><strong>Cost: </strong>Basic membership fee.</p>
+                <strong>Benefits: </strong>
+                <ul>
+                    <li>Access to newsletters.</li>
+                    <li>Invitation to meetings.</li>
+                    <li>Event volunteer opportunities.</li>
+                    <li>Member discounts.</li>
+                    <li>Recognition as Bronze member.</li>
+                </ul>
+            </div>
+            <div class="member-card">
+                <h3>Silver Membership</h3>
+                <p><strong>Cost: </strong>Moderate membership fee.</p>
+                <strong>Benefits: </strong>
+                <ul>
+                    <li>All Bronze benefits.</li>
+                    <li>Exclusive webinars/workshops.</li>
+                    <li>Event discounts.</li>
+                    <li>Silver member badge.</li>
+                    <li>Inclusion in annual report.</li>
+                </ul>
+            </div>
+            <div class="member-card">
+                <h3>Gold Membership</h3>
+                <p><strong>Cost: </strong>Highest membership fee.</p>
+                <strong>Benefits: </strong>
+                <ul>
+                    <li>All Silver benefits.</li>
+                    <li>Access to networking events.</li>
+                    <li>Premium advertising space.</li>
+                    <li>Significant event discounts.</li>
+                    <li>Gold member plaque.</li>
+                    <li>Personalized recognition.</li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="copyright">
+            <p>&copy; <span class="currentYear"></span> Nelson Monteiro, Portugal </p>
+            <p>Web Frontend Development | WDD230</p>
+        </div>
+
+        <div class="lastmod">
+            <p>Last Modification:</p>
+            <p class="lastModified"></p>
+        </div>
+
+        <div class="contacts">
+            <p>Contact Information:</p>
+            <p>+351 234 567 890</p>
+            <p>portocc@gmail.pt</p>
+        </div>
+    </footer>
+
+    <script src="scripts/index-chamber.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You!</title>
+    <meta name="description" content="Thank you for joining the Chamber of Commerce">
+    <meta name="author" content="Nelson Monteiro">
+    <link rel="icon" href="Port.ico">
+    <meta property="og:title" content="Thank You for Joining">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://nelsonmonteiro85.github.io/wdd230/chamber/thankyou.html">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/larger.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <a class="logo" href="index.html">PortoCC</a>
+            <button class="hamburger" id="hamburger" aria-label="Toggle Menu">
+                <div></div>
+                <div></div>
+                <div></div>
+            </button>
+            <div class="links">
+                <ul class="nav-list">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="discover.html">Discover</a></li>
+                    <li><a href="#">Directory</a></li>
+                    <li><a class="join button" href="join.html">Join</a></li>
+                </ul>
+            </div>
+            <div id="darkModeToggle">🌙</div>
+        </nav>
+
+        <section id="hero-msg">
+            <h1 class="title">Thank You!</h1>
+        </section>
+    </header>
+
+    <main class="main-thanks">
+        <h1>Chamber of Commerce Membership</h1>
+        <p>Thanks for joining the Chamber of Commerce. We will send you an email to confirm your subscription.</p>
+    </main>
+
+    <footer>
+        <div class="copyright">
+            <p>&copy; <span class="currentYear"></span> Nelson Monteiro, Portugal </p>
+            <p>Web Frontend Development | WDD230</p>
+        </div>
+
+        <div class="lastmod">
+            <p>Last Modification:</p>
+            <p class="lastModified"></p>
+        </div>
+
+        <div class="contacts">
+            <p>Contact Information:</p>
+            <p>+351 234 567 890</p>
+            <p>portocc@gmail.pt</p>
+        </div>
+    </footer>
+
+    <script>
+        document.querySelector('.currentYear').textContent = new Date().getFullYear();
+        document.querySelector('.lastModified').textContent = document.lastModified;
+    </script>
+    <script src="scripts/index-chamber.js"></script>
+    <script src="scripts/weather.js"></script>
+</body>
+
+</html>
