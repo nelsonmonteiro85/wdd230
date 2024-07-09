@@ -1,0 +1,28 @@
+{
+    "familyName": "Monteiro",
+    "dateMovedIn": "2024-02-19",
+    "numberOfPeople": 4,
+    "visitedByBishopric": true,
+    "familyMembers": [
+        {
+            "name": "Nelson Monteiro",
+            "gender": "Male",
+            "birthdate": "1985-07-04"
+        },
+        {
+            "name": "Nadine Monteiro",
+            "gender": "Female",
+            "birthdate": "1989-06-26"
+        },
+        {
+            "name": "Logan Monteiro",
+            "gender": "Male",
+            "birthdate": "2017-02-13"
+        },
+        {
+            "name": "Noah Monteiro",
+            "gender": "Male",
+            "birthdate": "2021-02-19"
+        }
+    ]
+}
