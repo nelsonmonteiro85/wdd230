@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     // Selecting elements
     let pass1 = document.getElementById('pass1');
     let pass2 = document.getElementById('pass2');
@@ -15,35 +15,35 @@ document.addEventListener('DOMContentLoaded', function() {
 
     function validatePasswords() {
         passwordError.textContent = ''; // Clear previous errors
-    
+
         // Check if pass1 is empty
         if (!pass1.value) {
             passwordError.textContent = 'Please enter a password';
             pass1.setCustomValidity('Please enter a password');
             return false;
         }
-    
+
         // Check for allowed characters in pass1
         if (!allowedPattern.test(pass1.value)) {
             passwordError.textContent = 'Password must be alphanumeric (a-z, A-Z, 0-9)';
             pass1.setCustomValidity('Password must be alphanumeric (a-z, A-Z, 0-9)');
             return false;
         }
-    
+
         // Check if pass2 is empty
         if (!pass2.value) {
             passwordError.textContent = 'Please confirm your password';
             pass2.setCustomValidity('Please confirm your password');
             return false;
         }
-    
+
         // Check if passwords match
         if (pass1.value !== pass2.value) {
             passwordError.textContent = 'Passwords do not match';
             pass2.setCustomValidity('Passwords do not match');
             return false;
         }
-    
+
         // If everything is valid
         pass1.setCustomValidity('');
         pass2.setCustomValidity('');
@@ -72,7 +72,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // Event listener for form submission
-    signupForm.addEventListener('submit', function(event) {
+    signupForm.addEventListener('submit', function (event) {
         event.preventDefault(); // Prevent default form submission
 
         // Validate passwords and email
@@ -146,4 +146,20 @@ document.addEventListener('DOMContentLoaded', function() {
             mainContent.style.transform = 'translateY(0)';
         }
     });
+
+    // Function to update the range value output
+    function updateValue(value) {
+        document.getElementById('ratingOutput').textContent = value;
+    }
+
+    // Initial setup: set default value to 1
+    let pageRating = document.getElementById('pageRating');
+    pageRating.value = 1; // Set initial value to 1
+    updateValue(pageRating.value);
+
+    // Event listener for input on range input
+    pageRating.addEventListener('input', function () {
+        updateValue(pageRating.value);
+    });
+    
 });
