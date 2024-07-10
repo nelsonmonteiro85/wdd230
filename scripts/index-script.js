@@ -116,7 +116,7 @@ document.addEventListener('DOMContentLoaded', function () {
             return;
         }
 
-        const currentWeatherUrl = "https://api.openweathermap.org/data/2.5/weather?lat=41.00&lon=-8.64&units=metric&APPID=7df97f2950fc6d28758ce291800a8d12";
+        const currentWeatherUrl = "https://api.openweathermap.org/data/2.5/weather?lat=50.89&lon=1.03&units=metric&appid=d8b6dada30c90e5d706e576670538e19";
 
         try {
             const response = await fetch(currentWeatherUrl);
