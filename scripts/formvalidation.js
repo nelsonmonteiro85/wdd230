@@ -152,14 +152,18 @@ document.addEventListener('DOMContentLoaded', function () {
         document.getElementById('ratingOutput').textContent = value;
     }
 
-    // Initial setup: set default value to 1
+    // Initial setup for pageRating
     let pageRating = document.getElementById('pageRating');
-    pageRating.value = 1; // Set initial value to 1
-    updateValue(pageRating.value);
-
-    // Event listener for input on range input
-    pageRating.addEventListener('input', function () {
+    if (pageRating) {
+        pageRating.value = 1; // Set initial value to 1
         updateValue(pageRating.value);
-    });
+
+        // Event listener for input change on #pageRating
+        pageRating.addEventListener('input', function () {
+            updateValue(pageRating.value);
+        });
+    } else {
+        console.error('pageRating element not found.');
+    }
     
 });
