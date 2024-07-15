@@ -378,7 +378,6 @@ hr {
     margin-left: 10px;
     border: 1px solid var(--secondary-color);
     box-shadow: 0 0 20px var(--secondary-color);
-    ;
     border-radius: 5px;
     width: 400px;
     height: auto;
@@ -439,8 +438,7 @@ hr {
 }
 
 .gallery-item img:hover {
-    transform: scale(1.9);
-    /* Zoom out effect on hover */
+    transform: scale(1.9);/* Zoom out effect on hover */
     z-index: 2;
 }
 
@@ -462,12 +460,12 @@ hr {
 }
 
 footer {
-    background-color: var(--primary-color);
-    color: var(--headline-color-on-color);
-    display: block;
+    display: flex;
+    justify-content: space-around;
     align-items: center;
     padding: 20px;
-    margin-top: 10%;
+    background-color: var(--primary-color);
+    color: var(--accent1-color);
 }
 
 /* Hamburguer */

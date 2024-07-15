@@ -7,6 +7,13 @@ document.addEventListener('DOMContentLoaded', function () {
     let lastModifiedDate = new Date(document.lastModified).toLocaleString();
     document.querySelector(".lastModified").textContent = lastModifiedDate;
 
+    // Set the hidden timestamp field with the current date and time
+    let timestamp = new Date().toISOString();
+    const timestampField = document.getElementById('timestamp');
+    if (timestampField) {
+        timestampField.value = timestamp;
+    }
+
     // Dark mode toggle
     const darkModeToggle = document.getElementById('darkModeToggle');
     const body = document.body;
@@ -43,23 +50,25 @@ document.addEventListener('DOMContentLoaded', function () {
     const heroMsg = document.querySelector('#hero-msg');
     const footer = document.querySelector('footer');
 
-    hamburger.addEventListener('click', function() {
-        hamburger.classList.toggle('open');
-        links.classList.toggle('open');
+    if (hamburger) {
+        hamburger.addEventListener('click', function() {
+            hamburger.classList.toggle('open');
+            links.classList.toggle('open');
 
-        if (links.classList.contains('open')) {
-            const linksHeight = links.offsetHeight;
+            if (links.classList.contains('open')) {
+                const linksHeight = links.offsetHeight;
 
-            heroSection.style.transform = `translateY(${linksHeight}px)`;
-            heroMsg.style.transform = `translateY(${linksHeight}px)`;
-            mainContent.style.transform = `translateY(${linksHeight}px)`;
-            footer.style.transform = `translateY(${linksHeight}px)`;
-            mainContent.style.transition = 'transform 0.3s ease';
-        } else {
-            heroSection.style.transform = 'translateY(0)';
-            heroMsg.style.transform = 'translateY(0)';
-            mainContent.style.transform = 'translateY(0)';
-            footer.style.transform = 'translateY(0)';
-        }
-    });
+                if (heroSection) heroSection.style.transform = `translateY(${linksHeight}px)`;
+                if (heroMsg) heroMsg.style.transform = `translateY(${linksHeight}px)`;
+                if (mainContent) mainContent.style.transform = `translateY(${linksHeight}px)`;
+                if (footer) footer.style.transform = `translateY(${linksHeight}px)`;
+                if (mainContent) mainContent.style.transition = 'transform 0.3s ease';
+            } else {
+                if (heroSection) heroSection.style.transform = 'translateY(0)';
+                if (heroMsg) heroMsg.style.transform = 'translateY(0)';
+                if (mainContent) mainContent.style.transform = 'translateY(0)';
+                if (footer) footer.style.transform = 'translateY(0)';
+            }
+        });
+    }
 });    
