@@ -1,128 +1,127 @@
 {
-    "weeks": [
-      {
-        "week": "Week 1",
-        "links": [
-          {
-            "url": "week01/holygrail.html",
-            "title": "CSS Layout Review W01"
-          },
-          {
-            "url": "week01/media-query.html",
-            "title": "Media Query Example"
-          },
-          {
-            "url": "week01/chamber-site-plan.html",
-            "title": "Chamber Site Plan"
-          }
-        ]
-      },
-      {
-        "week": "Week 2",
-        "links": [
-          {
-            "url": "week02/design.html",
-            "title": "Web Design Principles"
-          },
-          {
-            "url": "https://codepen.io/nelsonmonteiro85/pen/ExzoWJQ",
-            "title": "Responsive 'Hamburger' Menu"
-          },
-          {
-            "url": "week02/bom.html",
-            "title": "Book Of Mormon - Top 10"
-          }
-        ]
-      },
-      {
-        "week": "Week 3",
-        "links": [
-          {
-            "url": "week03/images/landscape.webp",
-            "title": "WEBP Landscape"
-          },
-          {
-            "url": "week03/lazyload.html",
-            "title": "Lazy Loading Favourite Games"
-          },
-          {
-            "url": "week03/responsive-images.html",
-            "title": "Responsive Images: srcset"
-          },
-          {
-            "url": "week03/bom.html",
-            "title": "Storage API - BOM"
-          }
-        ]
-      },
-      {
-        "week": "Week 4",
-        "links": [
-          {
-            "url": "https://codepen.io/nelsonmonteiro85/pen/GRbKGJq",
-            "title": "Pseudo-class Fun"
-          },
-          {
-            "url": "week04/images/CSS Combinators.jpg",
-            "title": "CSS Combinators"
-          },
-          {
-            "url": "week04/tablebuild.html",
-            "title": "ACME Table"
-          },
-          {
-            "url": "week04/w04Form/index.html",
-            "title": "HTML Forms"
-          }
-        ]
-      },
-      {
-        "week": "Week 5",
-        "links": [
-          {
-            "url": "https://codepen.io/nelsonmonteiro85/pen/zYVYLMB",
-            "title": "CSS Pseudo-elements"
-          },
-          {
-            "url": "week05/new-ward-members.json",
-            "title": "JSON"
-          },
-          {
-            "url": "week05/prophets.html",
-            "title": "The Fetch API"
-          },
-          {
-            "url": "week05/weather.html",
-            "title": "Consuming a Weather API"
-          }
-        ]
-      },
-      {
-        "week": "Week 6",
-        "links": [
-          {
-            "url": "week06/example1.html",
-            "title": "Example 1 W06"
-          },
-          {
-            "url": "week06/example2.html",
-            "title": "Example 2 W06"
-          }
-        ]
-      },
-      {
-        "week": "Week 7",
-        "links": [
-          {
-            "url": "week07/example1.html",
-            "title": "Example 1 W07"
-          },
-          {
-            "url": "week07/example2.html",
-            "title": "Example 2 W07"
-          }
-        ]
-      }
-    ]
-  }
-  
+  "weeks": [
+    {
+      "week": "Week 1",
+      "links": [
+        {
+          "url": "week01/holygrail.html",
+          "title": "CSS Layout Review W01"
+        },
+        {
+          "url": "week01/media-query.html",
+          "title": "Media Query Example"
+        },
+        {
+          "url": "week01/chamber-site-plan.html",
+          "title": "Chamber Site Plan"
+        }
+      ]
+    },
+    {
+      "week": "Week 2",
+      "links": [
+        {
+          "url": "week02/design.html",
+          "title": "Web Design Principles"
+        },
+        {
+          "url": "https://codepen.io/blazzard-jason/pen/gmGxaj/",
+          "title": "Responsive 'Hamburger' Menu"
+        },
+        {
+          "url": "week02/bom.html",
+          "title": "Book Of Mormon - Top 10"
+        }
+      ]
+    },
+    {
+      "week": "Week 3",
+      "links": [
+        {
+          "url": "week03/images/landscape.webp",
+          "title": "WEBP Landscape"
+        },
+        {
+          "url": "week03/lazyload.html",
+          "title": "Lazy Loading Favourite Games"
+        },
+        {
+          "url": "week03/responsive-images.html",
+          "title": "Responsive Images: srcset"
+        },
+        {
+          "url": "week03/bom.html",
+          "title": "Storage API - BOM"
+        }
+      ]
+    },
+    {
+      "week": "Week 4",
+      "links": [
+        {
+          "url": "https://codepen.io/nelsonmonteiro85/pen/GRbKGJq",
+          "title": "Pseudo-class Fun"
+        },
+        {
+          "url": "week04/images/CSS Combinators.jpg",
+          "title": "CSS Combinators"
+        },
+        {
+          "url": "week04/tablebuild.html",
+          "title": "ACME Table"
+        },
+        {
+          "url": "week04/w04Form/index.html",
+          "title": "HTML Forms"
+        }
+      ]
+    },
+    {
+      "week": "Week 5",
+      "links": [
+        {
+          "url": "https://codepen.io/nelsonmonteiro85/pen/zYVYLMB",
+          "title": "CSS Pseudo-elements"
+        },
+        {
+          "url": "week05/new-ward-members.json",
+          "title": "JSON"
+        },
+        {
+          "url": "week05/prophets.html",
+          "title": "The Fetch API"
+        },
+        {
+          "url": "week05/weather.html",
+          "title": "Consuming a Weather API"
+        }
+      ]
+    },
+    {
+      "week": "Week 6",
+      "links": [
+        {
+          "url": "week06/example1.html",
+          "title": "Example 1 W06"
+        },
+        {
+          "url": "week06/example2.html",
+          "title": "Example 2 W06"
+        }
+      ]
+    },
+    {
+      "week": "Week 7",
+      "links": [
+        {
+          "url": "week07/example1.html",
+          "title": "Example 1 W07"
+        },
+        {
+          "url": "week07/example2.html",
+          "title": "Example 2 W07"
+        }
+      ]
+    }
+  ]
+}

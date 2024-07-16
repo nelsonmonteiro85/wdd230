@@ -1,4 +1,4 @@
-const baseURL = "https://https://nelsonmonteiro85.github.io/wdd230/";
+const baseURL = "https://nelsonmonteiro85.github.io/wdd230/";
 const linksURL = "https://nelsonmonteiro85.github.io/wdd230/data/links.json";
 
 async function getLinks() {
@@ -8,8 +8,6 @@ async function getLinks() {
             throw new Error(`HTTP error! Status: ${response.status}`);
         }
         const data = await response.json();
-        // Uncomment the next line to test the JSON data
-        // console.log(data);
         displayLinks(data.weeks);
     } catch (error) {
         console.error('Error fetching the links:', error);
@@ -23,10 +21,15 @@ function displayLinks(weeks) {
     weeks.forEach(week => {
         const weekItem = document.createElement('li');
         weekItem.innerHTML = `${week.week}: `;
-        
+
         week.links.forEach((link, index) => {
             const linkElement = document.createElement('a');
-            linkElement.href = `${baseURL}${link.url}`;
+            // Check if the link is an absolute URL
+            if (link.url.startsWith("http")) {
+                linkElement.href = link.url;
+            } else {
+                linkElement.href = `${baseURL}${link.url}`;
+            }
             linkElement.textContent = link.title;
 
             weekItem.appendChild(linkElement);
@@ -40,5 +43,5 @@ function displayLinks(weeks) {
     });
 }
 
-// Initial fetch and display of current weather
+// Initial fetch and display of links
 getLinks();
