@@ -24,11 +24,11 @@ document.addEventListener('DOMContentLoaded', () => {
                 section.innerHTML = `
                     <img src="images/${member.image}" alt="${member.name}">
                     <h3>${member.name}</h3>
+                    <p>${member.description}</p>
                     <p>${member.address}</p>
                     <p>${member.phone}</p>
-                    <p>${member.membershipLevel}</p>
-                    <a href="${member.website}" target="_blank">Website</a>
-                    <p>${member.description}</p>
+                    <a href="${member.website}" target="_blank" class="member-link">${member.website}</a>
+                    <h4>${member.membershipLevel}</h4>
                 `;
                 display.appendChild(section);
             });

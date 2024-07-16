@@ -691,6 +691,17 @@ textarea:focus {
     width: 100%;
 }
 
+.menu button {
+    background-color: var(--primary-color);
+    color: var(--accent1-color);
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 4px;
+    margin: 0 5px;
+    transition: background-color 0.3s;
+}
+
 #corporate-members {
     display: flex;
     flex-direction: column;
@@ -750,6 +761,19 @@ textarea:focus {
 
 #members.list section h3 {
     font-size: 1rem;
+}
+
+.member-link {
+    text-decoration: none;
+    color: var(--accent1-color);
+    text-shadow: 5px 2px 2px var(--secondary-color);
+}
+
+.member-link:hover {
+    color: var(--secondary-color);
+    text-shadow: 1px 1px 1px var(--accent1-color);
+    text-decoration: underline;
+    
 }
 
 @media (max-width: 768px) {

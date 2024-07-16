@@ -27,10 +27,10 @@ document.addEventListener('DOMContentLoaded', function () {
         if (heroImg) {
             if (body.classList.contains('dark-mode')) {
                 // Switch to dark mode image
-                heroImg.src = "images/Porto-ChamberN.jpg";
+                heroImg.src = "images/Porto-ChamberN.webp";
             } else {
                 // Switch to light mode image
-                heroImg.src = "images/Porto-ChamberD.jpg";
+                heroImg.src = "images/Porto-ChamberD.webp";
             }
         }
 
@@ -45,7 +45,7 @@ document.addEventListener('DOMContentLoaded', function () {
     // Hamburger menu toggle functionality
     const hamburger = document.getElementById('hamburger');
     const links = document.querySelector('.links');
-    const mainContent = document.querySelector('.main-home');
+    const mainContent = document.querySelector('.main-directory');
     const heroSection = document.querySelector('.hero');
     const heroMsg = document.querySelector('#hero-msg');
     const footer = document.querySelector('footer');
@@ -62,7 +62,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 if (heroMsg) heroMsg.style.transform = `translateY(${linksHeight}px)`;
                 if (mainContent) mainContent.style.transform = `translateY(${linksHeight}px)`;
                 if (footer) footer.style.transform = `translateY(${linksHeight}px)`;
-                if (mainContent) mainContent.style.transition = 'transform 0.3s ease';
+                if (mainContent) mainContent.style.transition = 'transform 0.9s ease';
             } else {
                 if (heroSection) heroSection.style.transform = 'translateY(0)';
                 if (heroMsg) heroMsg.style.transform = 'translateY(0)';
