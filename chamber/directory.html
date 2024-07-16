@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Porto Chamber of Commerce</title>
+    <meta name="description"
+        content="WDD230 - Web Frontend Development, Nelson Monteiro - Chamber of Commerce Homepage">
+    <meta name="author" content="Nelson Monteiro">
+    <link rel="icon" href="Port.ico">
+    <meta property="og:title" content="Porto Chamber of Commerce Homepage">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="images/Chamber-Homepage-media.webp">
+    <meta property="og:url" content="https://nelsonmonteiro85.github.io/wdd230/chamber/index.html">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/larger.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <a class="logo" href="index.html">PortoCC</a>
+            <button class="hamburger" id="hamburger" aria-label="Toggle Menu">
+                <span class="line"></span>
+                <span class="line"></span>
+                <span class="line"></span>
+            </button>
+            <div class="links">
+                <ul class="nav-list">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="discover.html">Discover</a></li>
+                    <li><a href="directory.html">Directory</a></li>
+                    <li><a class="join button" href="join.html">Join</a></li>
+                </ul>
+            </div>
+            <div id="darkModeToggle">🌙</div>
+        </nav>
+    </header>
+
+    <main class="main-directory">
+        <section class="card">
+            <img src="images/Nuno_Botelho-directorypage.webp" alt="President Image">
+            <div class="frame">
+                <h2>President's Message</h2>
+                <p>As President of Porto Chamber of Commerce (PortoCC), it is a pleasure to welcome all those who visit us.</p>
+                <p>With this portal we seek to give you an idea of an institution that already counts 190 years of existence, without ever abandoning the purpose of its creation: 
+                    to be a meeting point and a reflection center with the intention of promoting the progress and the illustration of the city of Porto and the Northern Region. 
+                    This has been the motto of PortoCC throughout its existence and it is certainly the guiding line that will lead us in the future.</p>
+                <hr>
+                    <h2>Projects</h2>
+                <p>Over the years, PortoCC has been linked to projects of undeniable value for the development of the city of Porto and the North Region:</p>
+                <ul>
+                    <li>The draft of the first Portuguese commercial code</li>
+                    <li>The construction of the Palácio da Bolsa, which it owns</li>
+                    <li>The creation of the Center for Economic and Financial Studies, which gave rise to the Faculty of Economics of Porto</li>
+                    <li>The creation of the Porto Stock Exchange</li>
+                    <li>The creation of the first two Portuguese banks (Banco Mercantil Portuense and Banco União) and the first Portuguese insurance company (Companhia de Seguros Segurança)</li>
+                </ul>
+                <p>PortoCC was also the driving force behind the construction of the first phase of the Port of Leixões and, more recently, the Association for the Museum of Transport and Communications. 
+                    It was also involved in the creation of the “Porto – Norte de Portugal” tourist destination and the first Specialized Competence Office in Oporto.</p>                
+            </div>
+        </section>
+        <section class="card" id="corporate-members">
+            <h2 class="center">Corporate Members</h2>
+            <div class="menu">
+                <button id="grid">⏹️Grid</button>
+                <button id="list">📄List</button>
+            </div>
+            <article class="grid" id="members">
+                <!-- Member cards inserted here by JavaScript -->
+            </article>
+        </section>
+    </main>
+
+    <footer>
+        <div class="copyright">
+            <p>&copy; <span class="currentYear"></span> Nelson Monteiro, Portugal </p>
+            <p>Web Frontend Development | WDD230</p>
+        </div>
+
+        <div class="lastmod">
+            <p>Last Modification:</p>
+            <p class="lastModified"></p>
+        </div>
+
+        <div class="contacts">
+            <p>Contact Information:</p>
+            <p>+351 234 567 890</p>
+            <p>portocc@gmail.pt</p>
+        </div>
+    </footer>
+
+    <script>
+        document.querySelector('.currentYear').textContent = new Date().getFullYear();
+        document.querySelector('.lastModified').textContent = document.lastModified;
+    </script>
+    <script src="scripts/index-chamber.js"></script>
+    <script src="scripts/weather.js"></script>
+    <script src="scripts/members.js"></script>
+</body>
+
+</html>

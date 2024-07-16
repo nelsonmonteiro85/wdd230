@@ -1,0 +1,78 @@
+{
+    "members": [
+        {
+            "name": "Broseta",
+            "address": "Av. António Augusto de Aguiar, 15 – 5 Esq. 1050-012. Lisboa, Portugal",
+            "phone": "+351 300 509 035",
+            "email": "infolisboa@broseta.com",
+            "website": "http://www.broseta.com",
+            "image": "broseta.webp",
+            "membershipLevel": "Gold",
+            "description": "Legal services and advisory."
+        },
+        {
+            "name": "DHL",
+            "address": "Av. D. João II, nº 51 4º, Lisboa, Portugal, 1990-085",
+            "phone": "+351 211 127 207",
+            "website": "http://www.dhlexpress.pt",
+            "image": "dhl.webp",
+            "membershipLevel": "Platinum",
+            "description": "International express deliveries."
+        },
+        {
+            "name": "Forum Oceano",
+            "address": "UPTEC Mar, Sala C2, Av. Da Liberdade S/N 4450-718 Leça Da Palmeira, Portugal",
+            "phone": "+351 220 120 764",
+            "website": "http://www.forumoceano.pt/en",
+            "image": "forumoceano.webp",
+            "membershipLevel": "Silver",
+            "description": "Promoting the maritime economy."
+        },
+        {
+            "name": "Sage",
+            "address": "Edifício Olympus II, Avenida D. Afonso Henriques, 1462 - 2º, 4450-013 Matosinhos, Portugal",
+            "phone": "+351 22 120 24 00",
+            "website": "http://www.sage.com/pt-pt",
+            "image": "sage.webp",
+            "membershipLevel": "Gold",
+            "description": "Business management software."
+        },
+        {
+            "name": "Makro",
+            "address": "Rua da Arroteia, s/n, Leça do Balio, Matosinhos, 4465-026 São Mamede de Infesta, Portugal",
+            "phone": "+351 229 051 800",
+            "email": "matosinhos@makro.pt",
+            "image": "makro.webp",
+            "membershipLevel": "Gold",
+            "description": "Wholesale distribution."
+        },
+        {
+            "name": "Forvis Mazars",
+            "address": "Rua do Campo Alegre 830, 3° S-14, 4150-171 Porto, Portugal",
+            "phone": "",
+            "website": "http://www.mazars.pt",
+            "image": "chamber/images/forvis-mazars.jpg",
+            "membershipLevel": "Silver",
+            "description": "Audit, tax, and consulting."
+        },
+        {
+            "name": "MDS Group",
+            "address": "Av. da Boavista, 1277/81, Piso 0, 4100-130 Porto, Portugal",
+            "phone": "+351 226 082 410",
+            "email": "mds@mdsgroup.com",
+            "website": "http://www.mdsgroup.com",
+            "image": "mdsgroup.webp",
+            "membershipLevel": "Platinum",
+            "description": "Risk management and insurance."
+        },
+        {
+            "name": "Yunit Consulting",
+            "address": "Rua de António Aroso, N.º121, 4100-340 Porto, Portugal",
+            "phone": "+351 223 205 441",
+            "website": "http://www.yunitconsulting.com",
+            "image": "yunitconsulting.webp",
+            "membershipLevel": "Silver",
+            "description": "Business consulting and strategy."
+        }
+    ]
+}

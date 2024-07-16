@@ -358,6 +358,7 @@ hr {
     box-shadow: 0 0 20px var(--secondary-color);
     display: block;
     margin: auto;
+    border-radius: 5px;
 }
 
 .history-card {
@@ -652,8 +653,126 @@ textarea:focus {
     padding: 20px;
 }
 
+/* Directory Styles */
+.main-directory {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-directory .card img {
+    display: block;
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+    border-radius: 5px;
+}
+
+.main-directory .frame {
+    padding: 1em;
+}
+
+.main-directory .card {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 1em;
+}
+
+.main-directory .menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--secondary-color);
+    color: var(--accent2-color);
+    padding: 1em;
+    width: 100%;
+}
+
+#corporate-members {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#corporate-members .menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+#members.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+#members.list {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+#members section {
+    border: 1px solid var(--secondary-color);
+    box-shadow: 0 0 20px var(--secondary-color);
+    border-radius: 5px;
+    padding: 10px;
+}
+
+#members section img {
+    width: 100%;
+    height: auto;
+}
+
+#members section h3 {
+    font-size: 1.5rem;
+    margin: 0.5em 0;
+}
+
+#members section p,
+#members section a {
+    margin: 0.5em 0;
+}
+
+#members.list section {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    align-items: center;
+}
+
+#members.list section img {
+    display: none;
+}
+
+#members.list section h3 {
+    font-size: 1rem;
+}
 
 @media (max-width: 768px) {
+    #corporate-members .card {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #corporate-members .frame {
+        padding: 0;
+        text-align: center;
+    }
+    
+    .main-directory .card {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .main-directory .frame {
+        padding: 0;
+        text-align: center;
+    }
+
     .main-join {
         flex-direction: column;
         align-items: center;
