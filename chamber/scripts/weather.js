@@ -3,7 +3,7 @@ const icon = document.querySelector("#weather-icon");
 const figcaption = document.querySelector("figcaption");
 const threeDayForecastElement = document.getElementById('threeDayForecast');
 
-const currentWeatherUrl = "https://api.openweathermap.org/data/2.5/weather?lat=41.00&lon=-8.64&units=metric&APPID=7df97f2950fc6d28758ce291800a8d12";
+const currentWeatherUrl = "https://api.openweathermap.org/data/2.5/weather?lat=41.20&lon=-8.63&units=metric&APPID=7df97f2950fc6d28758ce291800a8d12";
 const forecastUrl = `https://api.openweathermap.org/data/2.5/forecast?q=Porto,PT&units=metric&appid=7df97f2950fc6d28758ce291800a8d12`;
 
 async function fetchWeather() {

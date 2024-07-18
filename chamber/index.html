@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Porto Chamber of Commerce</title>
-    <meta name="description" content="WDD230 - Web Frontend Development, Nelson Monteiro - Chamber of Commerce Homepage">
+    <meta name="description"
+        content="WDD230 - Web Frontend Development, Nelson Monteiro - Chamber of Commerce Homepage">
     <meta name="author" content="Nelson Monteiro">
     <link rel="icon" href="Port.ico">
     <meta property="og:title" content="Porto Chamber of Commerce Homepage">
@@ -85,29 +86,13 @@
 
         <section class="spotlights card">
             <h3 class="section-title">Member Spotlights</h3>
-            <div class="grid-container">
-                <div class="spot spot1">
-                    <img src="images/DHL.webp" alt="DHL Logo">
-                    <p>Address: Av. D. João II, nº 51 4º, Lisboa, Portugal, 1990-085</p>
-                    <p>Phone: +351 211 127 207</p>
-                    <p>Website: <a href="http://www.dhlexpress.pt" target="_blank">www.dhlexpress.pt</a></p>
-                </div>
-
-                <div class="spot spot2">
-                    <img src="images/ForumOceano.webp" alt="Forum Oceano Logo">
-                    <p>Address: UPTEC Mar, Sala C2, Av. Da Liberdade S/N 4450-718 Leça Da Palmeira – Portugal</p>
-                    <p>Phone: +351 220 120 764</p>
-                    <p>Website: <a href="http://www.forumoceano.pt/en" target="_blank">www.forumoceano.pt/en</a></p>
-                </div>
-
-                <div class="spot spot3">
-                    <img src="images/Sage.webp" alt="Sage Logo">
-                    <p>Address: Edifício Olympus II, Avenida D. Afonso Henriques, 1462 - 2º, 4450-013 Matosinhos</p>
-                    <p>Phone: +351 22 120 24 00</p>
-                    <p>Website: <a href="http://www.sage.com/pt-pt" target="_blank">www.sage.com/pt-pt</a></p>
-                </div>
+            <div class="grid-container" id="spotlight-container">
+                <!-- Dynamic spotlight ads will be inserted here -->
             </div>
         </section>
+        <div id="members">
+            <!-- Member directory content will be dynamically added here -->
+        </div>
     </main>
 
     <footer>
@@ -134,6 +119,7 @@
     </script>
     <script src="scripts/index-chamber.js"></script>
     <script src="scripts/weather.js"></script>
+    <script src="scripts/members.js"></script>
 </body>
 
 </html>

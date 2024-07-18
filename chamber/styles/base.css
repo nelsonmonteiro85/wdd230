@@ -288,45 +288,35 @@ div .forecast-item {
     padding-bottom: 10px;
 }
 
-.spotlights.card {
-    padding: 15px;
-}
-
 .grid-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 20px;
 }
 
-.spot {
+.spotlights {
+    padding: 20px;
+}
+
+.spotlight {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
     align-items: center;
-    padding: 15px;
+    margin-bottom: 15px;
 }
 
-.spot img {
-    width: 60%;
-    display: block;
-    border: 3px solid var(--secondary-color);
-    box-shadow: 0 0 10px var(--secondary-color);
-    border-radius: 5px;
-    margin-bottom: 10px;
+.spotlight img {
+    width: 100px;
+    height: 100px;
+    margin-right: 20px;
 }
 
-.spot p {
-    margin-bottom: 8px;
-    text-align: center;
+.spotlight div {
+    max-width: 600px;
 }
 
-.spot a {
-    color: var(--link-color);
-    transition: color 0.3s ease;
-}
-
-.spot a:hover {
-    color: var(--accent2-color);
+.section-title {
+    font-size: 24px;
+    margin-bottom: 20px;
 }
 
 .section-title {
@@ -635,12 +625,31 @@ textarea:focus {
 }
 
 .member-card {
-    background-color: #fff;
-    color: #283d3b;
     padding: 0.5em 2em;
     margin: 1em 0;
     border: #283d3b solid 2px;
     border-radius: 4px;
+}
+
+.member-card img {
+    display: block;
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+    border-radius: 5px;
+}
+
+.member-card-link {
+    text-decoration: none;
+    color: var(--accent1-color);
+    text-shadow: 5px 2px 2px var(--secondary-color);
+}
+
+.member-card-link:hover {
+    color: var(--secondary-color);
+    text-shadow: 1px 1px 1px var(--accent1-color);
+    text-decoration: underline;
+    
 }
 
 .main-thanks {

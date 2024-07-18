@@ -7,7 +7,7 @@
             "phone": "+351 300 509 035",
             "email": "infolisboa@broseta.com",
             "website": "http://www.broseta.com",
-            "image": "../images/iconbroseta.webp",
+            "image": "images/iconbroseta.webp",
             "membershipLevel": "Gold"
         },
         {
@@ -16,7 +16,7 @@
             "address": "Av. D. João II, nº 51 4º, Lisboa, Portugal, 1990-085",
             "phone": "+351 211 127 207",
             "website": "http://www.dhlexpress.pt",
-            "image": "../images/iconDHL.webp",
+            "image": "images/iconDHL.webp",
             "membershipLevel": "Platinum"
         },
         {
@@ -25,7 +25,7 @@
             "address": "UPTEC Mar, Sala C2, Av. Da Liberdade S/N 4450-718 Leça Da Palmeira, Portugal",
             "phone": "+351 220 120 764",
             "website": "http://www.forumoceano.pt/en",
-            "image": "../images/iconForumOceano.webp",
+            "image": "images/iconForumOceano.webp",
             "membershipLevel": "Silver"
         },
         {
@@ -34,7 +34,7 @@
             "address": "Edifício Olympus II, Avenida D. Afonso Henriques, 1462 - 2º, 4450-013 Matosinhos, Portugal",
             "phone": "+351 22 120 24 00",
             "website": "http://www.sage.com/pt-pt",
-            "image": "../images/iconsage.webp",
+            "image": "images/iconsage.webp",
             "membershipLevel": "Gold"
         },
         {
@@ -43,7 +43,7 @@
             "address": "Rua da Arroteia, s/n, Leça do Balio, Matosinhos, 4465-026 São Mamede de Infesta, Portugal",
             "phone": "+351 229 051 800",
             "email": "matosinhos@makro.pt",
-            "image": "../images/iconmakro.webp",
+            "image": "images/iconmakro.webp",
             "membershipLevel": "Gold"
         },
         {
@@ -52,7 +52,7 @@
             "address": "Rua do Campo Alegre 830, 3° S-14, 4150-171 Porto, Portugal",
             "phone": "",
             "website": "http://www.mazars.pt",
-            "image": "../images/iconforvis-mazars.webp",
+            "image": "images/iconforvis-mazars.webp",
             "membershipLevel": "Silver"
         },
         {
@@ -62,7 +62,7 @@
             "phone": "+351 226 082 410",
             "email": "mds@mdsgroup.com",
             "website": "http://www.mdsgroup.com",
-            "image": "../images/iconMDS.webp",
+            "image": "images/iconMDS.webp",
             "membershipLevel": "Platinum"
         },
         {
@@ -71,7 +71,7 @@
             "address": "Rua de António Aroso, N.º121, 4100-340 Porto, Portugal",
             "phone": "+351 223 205 441",
             "website": "http://www.yunitconsulting.com",
-            "image": "../images/iconyunit.webp",
+            "image": "images/iconyunit.webp",
             "membershipLevel": "Silver"
         }
     ]
