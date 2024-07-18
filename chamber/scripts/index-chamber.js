@@ -163,3 +163,30 @@ function shuffleArray(array) {
 
     return array;
 }
+
+// Function for Banner
+const banner = document.getElementById('banner');
+const closeBannerBtn = document.getElementById('closeBanner');
+
+// Function to check if today is Monday, Tuesday, or Wednesday
+function isWeekdayForBanner() {
+    const today = new Date().getDay(); // 0 (Sunday) to 6 (Saturday)
+    return today >= 1 && today <= 3; // Monday (1), Tuesday (2), Wednesday (3)
+}
+
+// Function to show or hide the banner based on current day
+function toggleBanner() {
+    if (isWeekdayForBanner()) {
+        banner.style.display = 'block';
+    } else {
+        banner.style.display = 'none';
+    }
+}
+
+// Initial check when page loads
+toggleBanner();
+
+// Event listener for close banner button
+closeBannerBtn.addEventListener('click', function () {
+    banner.style.display = 'none';
+});
