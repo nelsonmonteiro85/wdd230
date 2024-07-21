@@ -8,7 +8,7 @@
             "email": "infolisboa@broseta.com",
             "website": "http://www.broseta.com",
             "image": "images/iconbroseta.webp",
-            "membershipLevel": "Gold"
+            "membershipLevel": "Silver"
         },
         {
             "name": "DHL",
@@ -17,7 +17,7 @@
             "phone": "+351 211 127 207",
             "website": "http://www.dhlexpress.pt",
             "image": "images/iconDHL.webp",
-            "membershipLevel": "Platinum"
+            "membershipLevel": "Gold"
         },
         {
             "name": "Forum Oceano",
@@ -26,7 +26,7 @@
             "phone": "+351 220 120 764",
             "website": "http://www.forumoceano.pt/en",
             "image": "images/iconForumOceano.webp",
-            "membershipLevel": "Silver"
+            "membershipLevel": "Gold"
         },
         {
             "name": "Sage",
@@ -35,7 +35,7 @@
             "phone": "+351 22 120 24 00",
             "website": "http://www.sage.com/pt-pt",
             "image": "images/iconsage.webp",
-            "membershipLevel": "Gold"
+            "membershipLevel": "Silver"
         },
         {
             "name": "Makro",
@@ -45,7 +45,7 @@
             "email": "matosinhos@makro.pt",
             "website": "https://www.makro.pt/",
             "image": "images/iconmakro.webp",
-            "membershipLevel": "Gold"
+            "membershipLevel": "Non Profit"
         },
         {
             "name": "Forvis Mazars",
@@ -64,7 +64,7 @@
             "email": "mds@mdsgroup.com",
             "website": "http://www.mdsgroup.com",
             "image": "images/iconMDS.webp",
-            "membershipLevel": "Platinum"
+            "membershipLevel": "Bronze"
         },
         {
             "name": "Yunit Consulting",

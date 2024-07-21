@@ -42,6 +42,18 @@ document.addEventListener('DOMContentLoaded', function () {
     const heroMsg = document.querySelector('#hero-msg'); // Adjusted selector
     const footer = document.querySelector('footer'); // Adjusted selector
 
+    // Function to apply transition to an element
+    function applyTransition(element, duration = '0.9s', easing = 'ease') {
+        if (element) {
+            element.style.transition = `transform ${duration} ${easing}`;
+        }
+    }
+
+    // Apply transition to all elements
+    applyTransition(heroSection);
+    applyTransition(heroMsg);
+    applyTransition(footer);
+
     hamburger.addEventListener('click', function () {
         hamburger.classList.toggle('open');
         links.classList.toggle('open');
@@ -62,6 +74,7 @@ document.addEventListener('DOMContentLoaded', function () {
             console.error('One or more elements not found.');
         }
     });
+
 
     // Local storage for last visit date
     const lastVisitKey = 'lastVisit';
@@ -85,4 +98,4 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     localStorage.setItem(lastVisitKey, now);
-});    
+});

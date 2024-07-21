@@ -93,6 +93,13 @@ nav {
     z-index: 10;
 }
 
+.nav-list a.active {
+    font-weight: bold;
+    color: var(--secondary-color);
+    background-color: var(--accent1-color);
+    border-radius: 5px;
+}
+
 #menu {
     display: block;
     font-size: 2rem;
@@ -229,7 +236,7 @@ img {
     left: 35%;
     width: 30%;
     z-index: 1000;
-    /* display: none; */
+    display: none;
 }
 
 .banner p {
@@ -697,6 +704,10 @@ textarea:focus {
     padding: 20px;
 }
 
+body.dark-mode .main-thanks {
+    color: var(--accent1-color);
+}
+
 /* Directory Styles */
 .main-directory {
     flex: 1;
@@ -949,7 +960,6 @@ textarea:focus {
 
     .links.open {
         display: flex;
-        /* Show links when hamburger is clicked */
         flex-direction: column;
     }
 

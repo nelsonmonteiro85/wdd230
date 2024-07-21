@@ -1,90 +1,68 @@
-document.addEventListener('DOMContentLoaded', async () => {
-    try {
-        const members = await fetchMembers();
+document.addEventListener('DOMContentLoaded', () => {
+    // Check if we are on the directory.html page
+    if (window.location.pathname.endsWith('directory.html')) {
+        const gridButton = document.querySelector("#grid");
+        const listButton = document.querySelector("#list");
+        const membersContainer = document.querySelector("#members");
 
-        // Filter gold and silver members
-        const spotlightMembers = members.filter(member => member.membershipLevel === 'Gold' || member.membershipLevel === 'Silver');
+        if (!gridButton || !listButton || !membersContainer) {
+            console.error("Required elements are missing in the DOM.");
+            return;
+        }
 
-        // Randomly select spotlight members (up to 3)
-        const randomSpotlights = shuffleArray(spotlightMembers).slice(0, 3);
+        // Fetch and display members
+        fetch('data/members.json')
+            .then(response => response.json())
+            .then(data => {
+                const members = data.members;
 
-        // Get the spotlight container
-        const spotlightContainer = document.getElementById('spotlight-container');
-        spotlightContainer.innerHTML = ''; // Clear existing content
+                // Function to create a member card
+                function createMemberCard(member) {
+                    return `
+                        <section>
+                            <img src="${member.image}" alt="${member.name}">
+                            <h3>${member.name}</h3>
+                            <p>${member.description}</p>
+                            <p>${member.address}</p>
+                            <p>${member.phone}</p>
+                            ${member.email ? `<p>Email: <a href="mailto:${member.email}" class="member-link">${member.email}</a></p>` : ''}
+                            <p><a href="${member.website}" target="_blank" class="member-link">${member.website}</a></p>
+                            <p>Membership Level: ${member.membershipLevel}</p>
+                        </section>
+                    `;
+                }
 
-        // Populate spotlight container with member data
-        randomSpotlights.forEach(member => {
-            const memberCard = createMemberCard(member);
-            spotlightContainer.appendChild(memberCard);
-        });
+                // Render members in grid format
+                function renderGrid(members) {
+                    membersContainer.innerHTML = members.map(createMemberCard).join('');
+                    membersContainer.classList.add("grid");
+                    membersContainer.classList.remove("list");
+                }
 
-    } catch (error) {
-        console.error('Error loading member spotlights:', error);
+                // Render members in list format
+                function renderList(members) {
+                    membersContainer.innerHTML = members.map(member => `
+                        <section>
+                            <h3>${member.name}</h3>
+                            <p>${member.description}</p>
+                            <p>${member.address}</p>
+                            <p>${member.phone}</p>
+                            ${member.email ? `<p>Email: <a href="mailto:${member.email}" class="member-link">${member.email}</a></p>` : ''}
+                            <p><a href="${member.website}" target="_blank" class="member-link">${member.website}</a></p>
+                            <p>Membership Level: ${member.membershipLevel}</p>
+                        </section>
+                    `).join('');
+                    membersContainer.classList.add("list");
+                    membersContainer.classList.remove("grid");
+                }
+
+                // Initial render in grid view
+                renderGrid(members);
+
+                // Event listeners for toggling views
+                gridButton.addEventListener("click", () => renderGrid(members));
+                listButton.addEventListener("click", () => renderList(members));
+            })
+            .catch(error => console.error('Error loading members data:', error));
     }
 });
-
-// Function to fetch members from JSON file
-async function fetchMembers() {
-    try {
-        const response = await fetch('data/members.json');
-        if (!response.ok) {
-            throw new Error('Network response was not ok');
-        }
-        const data = await response.json();
-        return data.members;
-    } catch (error) {
-        console.error('Error fetching members:', error);
-        return [];
-    }
-}
-
-// Function to create member card
-function createMemberCard(member) {
-    console.log('Member image path:', member.image); // Check the image path
-
-    const card = document.createElement('div');
-    card.classList.add('member-card');
-
-    // Adjust the image path based on the directory structure
-    const imagePath = member.image.startsWith('images/') ? member.image : `images/${member.image}`;
-
-    const image = document.createElement('img');
-    image.src = imagePath;
-    image.alt = member.name;
-    card.appendChild(image);
-
-    const name = document.createElement('h4');
-    name.textContent = member.name;
-    card.appendChild(name);
-
-    const description = document.createElement('p');
-    description.textContent = member.description;
-    card.appendChild(description);
-
-    const websiteLink = document.createElement('a');
-    websiteLink.href = member.website;
-    websiteLink.textContent = member.website;
-    websiteLink.classList.add('member-card-link');
-    card.appendChild(websiteLink);
-
-    return card;
-}
-
-// Function to shuffle array (Fisher-Yates shuffle)
-function shuffleArray(array) {
-    let currentIndex = array.length, temporaryValue, randomIndex;
-
-    // While there remain elements to shuffle
-    while (currentIndex !== 0) {
-        // Pick a remaining element
-        randomIndex = Math.floor(Math.random() * currentIndex);
-        currentIndex -= 1;
-
-        // Swap it with the current element
-        temporaryValue = array[currentIndex];
-        array[currentIndex] = array[randomIndex];
-        array[randomIndex] = temporaryValue;
-    }
-
-    return array;
-}
