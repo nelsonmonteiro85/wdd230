@@ -7,7 +7,7 @@
             "phone": "+351 300 509 035",
             "email": "infolisboa@broseta.com",
             "website": "http://www.broseta.com",
-            "image": "images/iconbroseta.webp",
+            "image": "images/iconBroseta.webp",
             "membershipLevel": "Silver"
         },
         {
@@ -72,7 +72,7 @@
             "address": "Rua de António Aroso, N.º121, 4100-340 Porto, Portugal",
             "phone": "+351 223 205 441",
             "website": "http://www.yunitconsulting.com",
-            "image": "images/iconyunit.webp",
+            "image": "images/iconYunit.webp",
             "membershipLevel": "Silver"
         }
     ]

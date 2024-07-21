@@ -98,6 +98,7 @@ nav {
     color: var(--secondary-color);
     background-color: var(--accent1-color);
     border-radius: 5px;
+    margin: 10px;
 }
 
 #menu {
@@ -832,6 +833,9 @@ body.dark-mode .main-thanks {
 }
 
 @media (max-width: 768px) {
+    body {
+        box-shadow: none;
+    }
     #corporate-members .card {
         flex-direction: column;
         align-items: center;

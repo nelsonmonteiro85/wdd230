@@ -45,9 +45,9 @@ document.addEventListener('DOMContentLoaded', function () {
     // Hamburger menu toggle functionality
     const hamburger = document.getElementById('hamburger');
     const links = document.querySelector('.links');
-    const mainContent = document.querySelector('.main-directory');
     const heroSection = document.querySelector('.hero');
     const heroMsg = document.querySelector('#hero-msg');
+    const mainContent = document.querySelector('main');
     const footer = document.querySelector('footer');
 
     // Function to apply transition to an element
@@ -57,11 +57,10 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     }
 
-    // Apply transition to all elements
-    applyTransition(mainContent);
+    // Apply transition to hero elements and main content
     applyTransition(heroSection);
     applyTransition(heroMsg);
-    applyTransition(footer);
+    applyTransition(mainContent);
 
     if (hamburger) {
         hamburger.addEventListener('click', function () {
@@ -83,10 +82,6 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         });
     }
-
-
-    // Fetch members and populate member spotlights
-    fetchMembersAndPopulateSpotlights();
 });
 
 // Function to fetch members from JSON file

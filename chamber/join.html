@@ -18,7 +18,7 @@
     <link rel="stylesheet" href="styles/larger.css">
 </head>
 
-<body>
+<body class="join-page">
     <header>
         <nav>
             <a class="logo" href="index.html">PortoCC</a>
@@ -47,31 +47,31 @@
         <form method="get" action="thankyou.html" id="myForm">
             <h2 class="member-title">Become a Member of Porto Chamber of Commerce</h2>
 
-            <label class="input">First Name*
-                <input type="text" id="firstName" name="firstName" required>
+            <label class="input" for="firstName">First Name*
+                <input type="text" id="firstName" name="firstName" required autocomplete="given-name">
             </label>
-
-            <label class="input">Last Name*
-                <input type="text" id="lastName" name="lastName" required>
+            
+            <label class="input" for="lastName">Last Name*
+                <input type="text" id="lastName" name="lastName" required autocomplete="family-name">
             </label>
-
-            <label class="input">Title / Position
+            
+            <label class="input" for="titlePosition">Title / Position
                 <input type="text" id="titlePosition" name="titlePosition" pattern="[a-zA-Z\- ]{7,}"
-                    title="Enter at least 7 alphabetic characters, spaces, or hyphens">
+                    title="Enter at least 7 alphabetic characters, spaces, or hyphens" autocomplete="organization-title">
             </label>
-
-            <label class="input">Email*
-                <input type="email" id="email" name="email" required placeholder="someone@byui.edu">
+            
+            <label class="input" for="email">Email*
+                <input type="email" id="email" name="email" required placeholder="someone@byui.edu" autocomplete="email">
             </label>
-
-            <label class="input">Phone Number*
-                <input type="tel" id="tel" name="phone" required placeholder="1235551234">
+            
+            <label class="input" for="tel">Phone Number*
+                <input type="tel" id="tel" name="phone" required placeholder="1235551234" autocomplete="tel">
             </label>
-
-            <label class="input">Business / Organization's name*
-                <input type="text" id="businessName" name="businessName" required>
+            
+            <label class="input" for="businessName">Business / Organization's name*
+                <input type="text" id="businessName" name="businessName" required autocomplete="organization">
             </label>
-
+            
             <label class="input">Membership Level:
                 <select name="membership">
                     <option value="">Please Select</option>
@@ -87,9 +87,7 @@
             </label>
 
             <!-- Hidden timestamp field -->
-            <label class="timestamp">
-                <input type="hidden" id="timestamp" name="timestamp">
-            </label>
+            <input type="hidden" id="timestamp" name="timestamp">
 
             <button type="submit">Join Chamber</button>
         </form>
